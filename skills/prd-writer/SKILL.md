@@ -1,5 +1,5 @@
 ---
-name: "prd-v2"
+name: prd-writer
 description: "Expert Product Requirements Document writer and advisor. Use this skill whenever a user wants to write, draft, review, improve, or structure a PRD, product spec, feature brief, epic, or any product requirements document. Trigger for phrases like \"write a PRD for X\", \"help me document this feature\", \"create a product spec\", \"draft an epic\", \"I need a feature brief\", \"review my PRD\", or when a user describes a feature or product idea and needs it formally documented. Also trigger when a user asks about PRD best practices, templates, or how to structure product requirements. Always ask ONE optional question to understand context first, then deliver the complete document.\n"
 ---
 

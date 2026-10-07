@@ -1,5 +1,5 @@
 ---
-name: prd-evaluator-v5
+name: prd-evaluator
 description: >
   Evaluates an AI Product Requirements Document (PRD) against the appropriate rubric
   for its format — Full AI PRD (9 sections), One-Page PRD, or Agile Epic. Detects the

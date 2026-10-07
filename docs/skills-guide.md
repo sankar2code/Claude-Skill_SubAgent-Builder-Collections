@@ -9,7 +9,7 @@ A curated collection of technical skill documentation. Focused on product manage
 **Sankar** | Product Manager/Owner 
 Portfolio: [sankar.work](https://sankar.work)  
 GitHub: [@sankar2code](https://github.com/sankar2code)  
-LinkedIn: [Sankar](https://linkedin.com)  
+LinkedIn: [Sankar](https://www.linkedin.com/in/sankar-kumar-palaniappan-pm)  
 
 ---
 
@@ -25,32 +25,26 @@ This repository documents product management expertise and frameworks across:
 
 ## 📚 How to Use This Repository
 
-1. **Browse Skills:** Each skill is a standalone markdown file
+1. **Browse Skills:** Each skill is a folder under `skills/` with a `SKILL.md` file
 2. **Learn & Reference:** Use as guides for your own work
 3. **Apply Frameworks:** Implement practices in your projects
 4. **Share:** Reference these guides when discussing products
-5. **Clone Locally:** `git clone https://github.com/sankar2code/claude-skills.git`
+5. **Clone Locally:** `git clone https://github.com/sankar2code/Claude-Skill_SubAgent-Builder-Collections.git`
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-claude-skills/
-│
-├── README.md                          (This file)
-│
-├── prd-creation.md                    (PRD Writing Guide)
-│   └── Frameworks, templates, best practices
-│
-├── market-research.md                 (Market Analysis Guide)
-│   └── TAM/SAM/SOM, competitive landscape, trends
-│
-├── user-research.md                   (User Insights Guide)
-│   └── Research methods, personas, pain points
-│
-└── prd-evaluation.md                  (PRD Quality Checklist)
-    └── Evaluation framework, quality metrics, improvement guide
+Claude-Skill_SubAgent-Builder-Collections/
+├── skills/
+│   ├── prd-writer/SKILL.md        PRD writing (One-Page, Feature Brief, AI PRD, Epic, Full)
+│   ├── prd-evaluator/SKILL.md     Scores a PRD against the right rubric
+│   ├── market-research/SKILL.md   TAM/SAM/SOM, competitive landscape, trends
+│   └── user-research/SKILL.md     Research synthesis, personas, pain points
+├── agents/
+│   └── mockup-generator.md        PRD → clickable HTML mockups (sub-agent)
+└── docs/                          Guides (this file, sub-agent guide)
 ```
 
 ---
@@ -58,7 +52,7 @@ claude-skills/
 ## 📖 Currently Available Skills
 
 ### ✅ PRD Creation
-**File:** `prd-creation.md`
+**File:** `skills/prd-writer/SKILL.md`
 
 Learn how to write effective Product Requirements Documents including:
 - PRD structure and components
@@ -70,7 +64,7 @@ Learn how to write effective Product Requirements Documents including:
 ---
 
 ### ✅ Market Research
-**File:** `market-research.md`
+**File:** `skills/market-research/SKILL.md`
 
 Master market analysis and competitive intelligence:
 - Market sizing (TAM, SAM, SOM)
@@ -83,7 +77,7 @@ Master market analysis and competitive intelligence:
 ---
 
 ### ✅ User Research
-**File:** `user-research.md`
+**File:** `skills/user-research/SKILL.md`
 
 Understand your users deeply:
 - User research methodologies
@@ -96,7 +90,7 @@ Understand your users deeply:
 ---
 
 ### ✅ PRD Evaluation
-**File:** `prd-evaluation.md`
+**File:** `skills/prd-evaluator/SKILL.md`
 
 Evaluate and improve product specifications:
 - PRD quality assessment framework
@@ -113,16 +107,16 @@ Evaluate and improve product specifications:
 ### Quick Navigation
 
 **Want to write a better PRD?**
-→ Read: `prd-creation.md`
+→ Read: `skills/prd-writer/SKILL.md`
 
 **Need to analyze a market?**
-→ Read: `market-research.md`
+→ Read: `skills/market-research/SKILL.md`
 
 **Building user personas?**
-→ Read: `user-research.md`
+→ Read: `skills/user-research/SKILL.md`
 
 **Reviewing a PRD?**
-→ Read: `prd-evaluation.md`
+→ Read: `skills/prd-evaluator/SKILL.md`
 
 ---
 
@@ -150,7 +144,7 @@ PRD Evaluation
 
 ## 📝 File Descriptions
 
-### prd-creation.md
+### prd-writer
 **What it covers:**
 - PRD fundamentals and purpose
 - Essential components of a good PRD
@@ -164,7 +158,7 @@ PRD Evaluation
 
 ---
 
-### market-research.md
+### market-research
 **What it covers:**
 - Market sizing methodologies
 - TAM (Total Addressable Market) calculation
@@ -179,7 +173,7 @@ PRD Evaluation
 
 ---
 
-### user-research.md
+### user-research
 **What it covers:**
 - User research methodologies
 - Interview techniques
@@ -194,7 +188,7 @@ PRD Evaluation
 
 ---
 
-### prd-evaluation.md
+### prd-evaluator
 **What it covers:**
 - PRD quality assessment framework
 - Problem statement evaluation
@@ -243,28 +237,28 @@ After reading these skills, you'll be able to:
 
 **My Portfolio:** [sankar.work](https://sankar.work)  
 **GitHub:** [@sankar2code](https://github.com/sankar2code)  
-**LinkedIn:** [Sankar](https://linkedin.com)  
+**LinkedIn:** [Sankar](https://www.linkedin.com/in/sankar-kumar-palaniappan-pm)  
 
 ---
 
 ## 📈 Recommended Reading Order
 
 ### For New PMs
-1. Start: `user-research.md` (Understand your users first)
-2. Then: `market-research.md` (Know your market)
-3. Then: `prd-creation.md` (Write your PRD)
-4. Finally: `prd-evaluation.md` (Refine your work)
+1. Start: `skills/user-research/SKILL.md` (Understand your users first)
+2. Then: `skills/market-research/SKILL.md` (Know your market)
+3. Then: `skills/prd-writer/SKILL.md` (Write your PRD)
+4. Finally: `skills/prd-evaluator/SKILL.md` (Refine your work)
 
 ### For Experienced PMs
-1. Reference: `prd-creation.md` (Quick templates)
-2. Deep-dive: `market-research.md` (Advanced frameworks)
-3. Review: `prd-evaluation.md` (Quality checklist)
+1. Reference: `skills/prd-writer/SKILL.md` (Quick templates)
+2. Deep-dive: `skills/market-research/SKILL.md` (Advanced frameworks)
+3. Review: `skills/prd-evaluator/SKILL.md` (Quality checklist)
 
 ### For PRD Review
-→ Go directly to: `prd-evaluation.md`
+→ Go directly to: `skills/prd-evaluator/SKILL.md`
 
 ### For Market Analysis
-→ Go directly to: `market-research.md`
+→ Go directly to: `skills/market-research/SKILL.md`
 
 ---
 
@@ -287,9 +281,9 @@ Feel free to reference and learn from this collection.
 ## 📊 Repository Stats
 
 - **Total Skills:** 4 core product management skills
-- **Total Files:** 4 comprehensive guides
+- **Format:** Standard Agent Skills (`skills/<name>/SKILL.md`)
 - **Code Examples:** Case studies and templates included
-- **Last Updated:** June 2024
+- **Last Updated:** October 2026
 - **Author:** Sankar (@sankar2code)
 
 ---
@@ -317,14 +311,14 @@ A: Yes, they're updated as best practices evolve.
 
 1. **Clone this repo**
    ```bash
-   git clone https://github.com/sankar2code/claude-skills.git
+   git clone https://github.com/sankar2code/Claude-Skill_SubAgent-Builder-Collections.git
    ```
 
 2. **Pick a skill** based on what you need
-   - Writing a PRD? → Read `prd-creation.md`
-   - Analyzing market? → Read `market-research.md`
-   - Understanding users? → Read `user-research.md`
-   - Reviewing a PRD? → Read `prd-evaluation.md`
+   - Writing a PRD? → Read `skills/prd-writer/SKILL.md`
+   - Analyzing market? → Read `skills/market-research/SKILL.md`
+   - Understanding users? → Read `skills/user-research/SKILL.md`
+   - Reviewing a PRD? → Read `skills/prd-evaluator/SKILL.md`
 
 3. **Apply the frameworks** to your work
 
@@ -336,10 +330,10 @@ A: Yes, they're updated as best practices evolve.
 
 | Skill | File | Focus |
 |-------|------|-------|
-| PRD Creation | `prd-creation.md` | Writing effective specs |
-| Market Research | `market-research.md` | Market analysis |
-| User Research | `user-research.md` | Understanding users |
-| PRD Evaluation | `prd-evaluation.md` | Assessing quality |
+| PRD Creation | `skills/prd-writer/SKILL.md` | Writing effective specs |
+| Market Research | `skills/market-research/SKILL.md` | Market analysis |
+| User Research | `skills/user-research/SKILL.md` | Understanding users |
+| PRD Evaluation | `skills/prd-evaluator/SKILL.md` | Assessing quality |
 
 ---
 
@@ -347,7 +341,7 @@ A: Yes, they're updated as best practices evolve.
 
 - **Website:** [sankar.work](https://sankar.work)
 - **GitHub:** [@sankar2code](https://github.com/sankar2code)
-- **LinkedIn:** [Sankar](https://linkedin.com)
+- **LinkedIn:** [Sankar](https://www.linkedin.com/in/sankar-kumar-palaniappan-pm)
 - **Email:** [hello@sankar.work](mailto:hello@sankar.work)
 
 ---
@@ -363,7 +357,12 @@ If you find this collection helpful, please:
 
 ## 📝 Changelog
 
-### v1.0 (June 2024)
+### v1.1 (October 2026)
+- Restructured into the standard `skills/<name>/SKILL.md` layout so skills install directly
+- Renamed `prd-v2` → `prd-writer` and `prd-evaluator-v5` → `prd-evaluator`
+- Added plugin manifest for one-command install
+
+### v1.0 (Q1 2026)
 - Initial release
 - 4 product management skills documented
 - Templates and case studies included

@@ -79,7 +79,7 @@ Two ways:
 
 ## How to add a new subagent to this collection
 
-1. Create `<name>.md` in this folder (or `~/.claude/agents/` for a cross-project persona).
+1. Create `<name>.md` in the repo's `agents/` folder (or `~/.claude/agents/` for a cross-project persona).
 2. Write a `description` that states **both** what the agent does *and* the concrete situations/phrases that should trigger it — be a little assertive; under-specified descriptions get skipped.
 3. Scope `tools` to the minimum the persona genuinely needs (omit the field only if it truly needs everything).
 4. Write the body as a system prompt: frame the role, state the operating principles (the *why* behind its judgment calls), lay out an ordered workflow, define concrete conventions/output format, and give it a self-review step so it catches its own mistakes before handoff.
@@ -91,7 +91,7 @@ Two ways:
 
 | Agent | Purpose | Tools | Model |
 | --- | --- | --- | --- |
-| [`mockup-generator`](mockup-generator.md) | Turns a PRD into a set of high-fidelity, clickable HTML mockups — a navigable prototype a team can click through and react to before design/eng investment begins. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
+| [`mockup-generator`](../agents/mockup-generator.md) | Turns a PRD into a set of high-fidelity, clickable HTML mockups — a navigable prototype a team can click through and react to before design/eng investment begins. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
 
 ### `mockup-generator`
 
@@ -99,7 +99,7 @@ Two ways:
 
 **How it works:** runs a six-phase workflow — *ingest the PRD → plan a screen inventory & flow map (and check in with you) → establish a shared design system → build the mockups → self-review against a checklist → hand off with assumptions and open questions logged*. Output is plain HTML + Tailwind CDN + vanilla JS + Lucide icons, organized under a `mockups/` directory with a hub `index.html`, one file per screen, shared `assets/`, and its own traceability `README.md`.
 
-See [`mockup-generator.md`](mockup-generator.md) for the full persona definition, or this folder's prior worked example (an 11-screen prototype generated from a hotel-booking-cancellation PRD) for a sense of the depth and polish it aims for.
+See [`mockup-generator.md`](../agents/mockup-generator.md) for the full persona definition, or this folder's prior worked example (an 11-screen prototype generated from a hotel-booking-cancellation PRD) for a sense of the depth and polish it aims for.
 
 ---
 

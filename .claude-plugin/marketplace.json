@@ -1,0 +1,11 @@
+{
+  "name": "sankar2code",
+  "owner": { "name": "Sankar Kumar Palaniappan", "url": "https://sankar.work" },
+  "plugins": [
+    {
+      "name": "pm-builder-kit",
+      "source": "./",
+      "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market research, user research, and PRD-to-mockup generation."
+    }
+  ]
+}

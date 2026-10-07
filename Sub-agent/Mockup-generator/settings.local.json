@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(ls -la /Users/sankarkumarpalaniappan/Desktop/mockup-agent-lab/ 2>/dev/null && echo \"---SKILLS DIR---\" && ls -la /Users/sankarkumarpalaniappan/.claude/skills/ 2>/dev/null | head -40)",
-      "Bash(mkdir -p \"/Users/sankarkumarpalaniappan/Desktop/mockup-agent-lab/.claude/agents\" && ls -la \"/Users/sankarkumarpalaniappan/Desktop/mockup-agent-lab/.claude/\")"
-    ]
-  }
-}
