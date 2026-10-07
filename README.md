@@ -31,6 +31,19 @@ Five skills that take a PRD to a running, secure Next.js 16 + Supabase app, one 
 | 4 | [`frontend-setup`](skills/frontend-setup/SKILL.md) | Scaffolds and runs a Next.js 16 + React 19 + TypeScript app |
 | always on | [`design-system`](skills/design-system/SKILL.md) | Keeps every UI on your design tokens, with WCAG AA contrast |
 
+### Product Analytics pack
+
+Six skills that take an analytics question from vague request to decision-ready readout. Three include small Python scripts (standard library only). [Read the pack guide →](docs/product-analytics.md)
+
+| Skill | What it does |
+|---|---|
+| [`analytics-question-framing`](skills/analytics-question-framing/SKILL.md) | Turns a vague ask into prioritized questions tied to a decision, with hypotheses and data needs |
+| [`metric-root-cause`](skills/metric-root-cause/SKILL.md) | Explains why a metric moved: data checks, mix vs rate split, drill-down (`mix_rate.py`) |
+| [`cohort-retention`](skills/cohort-retention/SKILL.md) | Builds and reads retention triangles and curves (`cohort_table.py`) |
+| [`opportunity-sizing`](skills/opportunity-sizing/SKILL.md) | Low/base/high value with a driver tree, sensitivity and break-even |
+| [`experiment-design`](skills/experiment-design/SKILL.md) | A/B test plan: metrics, MDE, sample size and duration (`sample_size.py`), decision rules |
+| [`insight-storyteller`](skills/insight-storyteller/SKILL.md) | Answer-first readout: exec summary, slide outline with chart choices, Slack and email drafts |
+
 ### Sub-agents
 
 | Sub-agent | What it does |
@@ -66,7 +79,7 @@ Then just ask naturally, for example *"Write a one-page PRD for AI triage of sup
 .claude-plugin/        Plugin + marketplace manifest
 skills/<name>/SKILL.md Skills (standard Agent Skills format)
 agents/<name>.md       Claude Code sub-agents
-docs/                  Guides: skills-guide.md, prd-to-production.md, subagent-guide.md, mockup-generator.md
+docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, subagent-guide.md, mockup-generator.md
 CHANGELOG.md
 ```
 
@@ -74,6 +87,7 @@ CHANGELOG.md
 
 - [Skills guide](docs/skills-guide.md): what each skill covers and how to use them together
 - [PRD → Production pack](docs/prd-to-production.md): the five-stage build workflow
+- [Product Analytics pack](docs/product-analytics.md): from question to readout
 - [Sub-agent guide](docs/subagent-guide.md): how sub-agents work and how to add one
 - [Mockup Generator guide](docs/mockup-generator.md)
 

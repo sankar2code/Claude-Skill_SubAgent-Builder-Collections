@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.0 (October 2026)
+- Added the **Product Analytics pack**: `analytics-question-framing`, `metric-root-cause`, `cohort-retention`, `opportunity-sizing`, `experiment-design`, `insight-storyteller`, plus `docs/product-analytics.md`.
+- Added standard-library Python scripts: `mix_rate.py` (mix vs rate decomposition), `cohort_table.py` (retention triangle), `sample_size.py` (A/B test sample size and duration).
+
 ## v1.2.0 (October 2026)
 - Added the **PRD → Production pack**: `engineering-planner`, `implementation-specs`, `security-foundation`, `frontend-setup`, `design-system`, plus `docs/prd-to-production.md`.
 - `frontend-setup` updated to Next.js 16, React 19 and TypeScript (template build-tested).
