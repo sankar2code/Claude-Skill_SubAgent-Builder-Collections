@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.4.0 (October 2026)
+- Added the **Pharma & Clinical pack**: `trial-failure-investigator` (with `fetch_trial.py` for ClinicalTrials.gov v2 and PubMed), `gxp-part11-checker`, `clinical-ai-evaluation-design`, plus `docs/pharma-clinical.md`.
+
 ## v1.3.0 (October 2026)
 - Added the **Product Analytics pack**: `analytics-question-framing`, `metric-root-cause`, `cohort-retention`, `opportunity-sizing`, `experiment-design`, `insight-storyteller`, plus `docs/product-analytics.md`.
 - Added standard-library Python scripts: `mix_rate.py` (mix vs rate decomposition), `cohort_table.py` (retention triangle), `sample_size.py` (A/B test sample size and duration).

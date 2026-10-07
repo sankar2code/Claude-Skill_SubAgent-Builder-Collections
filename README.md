@@ -44,6 +44,16 @@ Six skills that take an analytics question from vague request to decision-ready 
 | [`experiment-design`](skills/experiment-design/SKILL.md) | A/B test plan: metrics, MDE, sample size and duration (`sample_size.py`), decision rules |
 | [`insight-storyteller`](skills/insight-storyteller/SKILL.md) | Answer-first readout: exec summary, slide outline with chart choices, Slack and email drafts |
 
+### Pharma & Clinical pack
+
+Three skills for life-sciences product, data and clinical-operations teams, using only public data and published frameworks. [Read the pack guide →](docs/pharma-clinical.md)
+
+| Skill | What it does |
+|---|---|
+| [`trial-failure-investigator`](skills/trial-failure-investigator/SKILL.md) | NCT ID → why the trial stopped: evidence from ClinicalTrials.gov and PubMed (`fetch_trial.py`), ranked hypotheses labeled fact / inference / hypothesis, with counter-arguments |
+| [`gxp-part11-checker`](skills/gxp-part11-checker/SKILL.md) | Gap assessment of a system, feature or AI tool against 21 CFR Part 11, EU Annex 11 and ALCOA+, with fixes written as testable requirements |
+| [`clinical-ai-evaluation-design`](skills/clinical-ai-evaluation-design/SKILL.md) | Monitoring signal → governance action, escalation pathway, trial design and estimand for clinical AI (Fosset et al., PLOS Digital Health 2026) |
+
 ### Sub-agents
 
 | Sub-agent | What it does |
@@ -79,7 +89,7 @@ Then just ask naturally, for example *"Write a one-page PRD for AI triage of sup
 .claude-plugin/        Plugin + marketplace manifest
 skills/<name>/SKILL.md Skills (standard Agent Skills format)
 agents/<name>.md       Claude Code sub-agents
-docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, subagent-guide.md, mockup-generator.md
+docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, pharma-clinical.md, subagent-guide.md, mockup-generator.md
 CHANGELOG.md
 ```
 
@@ -88,6 +98,7 @@ CHANGELOG.md
 - [Skills guide](docs/skills-guide.md): what each skill covers and how to use them together
 - [PRD → Production pack](docs/prd-to-production.md): the five-stage build workflow
 - [Product Analytics pack](docs/product-analytics.md): from question to readout
+- [Pharma & Clinical pack](docs/pharma-clinical.md): trials, GxP and clinical AI evaluation
 - [Sub-agent guide](docs/subagent-guide.md): how sub-agents work and how to add one
 - [Mockup Generator guide](docs/mockup-generator.md)
 

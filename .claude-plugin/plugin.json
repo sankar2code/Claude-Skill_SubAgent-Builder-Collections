@@ -1,7 +1,7 @@
 {
   "name": "pm-builder-kit",
-  "version": "1.3.0",
-  "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market research, user research, PRD-to-mockup generation, a PRD → Production pack that takes a PRD to a secure Next.js + Supabase app, and a Product Analytics pack from question framing to experiment design and readouts.",
+  "version": "1.4.0",
+  "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market and user research, PRD-to-mockup generation, a PRD → Production pack (secure Next.js + Supabase apps), a Product Analytics pack, and a Pharma & Clinical pack (trial failure analysis, GxP / Part 11 checks, clinical AI evaluation).",
   "author": {
     "name": "Sankar Kumar Palaniappan",
     "url": "https://sankar.work"
@@ -22,7 +22,11 @@
     "security",
     "analytics",
     "ab-testing",
-    "retention"
+    "retention",
+    "clinical-trials",
+    "gxp",
+    "21-cfr-part-11",
+    "pharma"
   ],
   "license": "MIT"
 }

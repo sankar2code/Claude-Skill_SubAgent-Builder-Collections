@@ -8,7 +8,7 @@
     {
       "name": "pm-builder-kit",
       "source": "./",
-      "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market research, user research, PRD-to-mockup generation, a PRD → Production pack that takes a PRD to a secure Next.js + Supabase app, and a Product Analytics pack from question framing to experiment design and readouts."
+      "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market and user research, PRD-to-mockup generation, a PRD → Production pack (secure Next.js + Supabase apps), a Product Analytics pack, and a Pharma & Clinical pack (trial failure analysis, GxP / Part 11 checks, clinical AI evaluation)."
     }
   ]
 }
