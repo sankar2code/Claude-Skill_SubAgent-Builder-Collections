@@ -20,9 +20,9 @@ After every stage, Claude stops, shows what it produced, and waits for your appr
 | 2 | `implementation-specs` | Engineering doc | `docs/specs/*.md`, `docs/specs/supabase-schema.sql` (paste-and-run), `.env.example` |
 | 3 | `security-foundation` | Engineering doc + specs | `docs/security/security-plan.md`, `supabase/rls-policies.sql`, `lib/security/*`, server-side auth routes |
 | 4 | `frontend-setup` | Specs | Next.js 16 + React 19 + TypeScript project, running on localhost |
-| 5 | build features | `docs/specs/` | One feature at a time, each confirmed before coding, with `design-system` applied to all UI |
+| 5 | `feature-builder` (sub-agent) | `docs/specs/` | One feature at a time, each confirmed before coding, with `design-system` applied to all UI, tests and a passing build |
 
-After Stage 5: write unit, integration and E2E tests, run a production build, deploy, and smoke-test the live app.
+After Stage 5: run `security-compliance-auditor` before launch, deploy, smoke-test the live app, and use `release-notes-writer` for the changelog.
 
 ## Default stack
 

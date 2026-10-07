@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.6.0 (October 2026)
+- Added 8 sub-agents: `prd-red-team-reviewer`, `backlog-builder`, `feature-builder` (Stage 5 of PRD → Production), `data-analyst`, `clinical-trial-landscape-scout`, `security-compliance-auditor`, `release-notes-writer`, `ai-eval-builder`.
+- Sub-agent guide now maps each agent to the skills it works with.
+
 ## v1.5.0 (October 2026)
 - Added `trial-eligibility-matcher` to the Pharma & Clinical pack, based on my Agentic Clinical Trial Matching product: `search_trials.py` (find recruiting trials), `fetch_criteria.py` (eligibility text from ClinicalTrials.gov), and `check_criteria.py` (deterministic rules check: citation required for Met, whole-token span check, conflicts, time windows, confidence floor, as-of replay).
 

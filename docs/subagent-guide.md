@@ -92,6 +92,14 @@ Two ways:
 | Agent | Purpose | Tools | Model |
 | --- | --- | --- | --- |
 | [`mockup-generator`](../agents/mockup-generator.md) | Turns a PRD into a set of high-fidelity, clickable HTML mockups — a navigable prototype a team can click through and react to before design/eng investment begins. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
+| [`prd-red-team-reviewer`](../agents/prd-red-team-reviewer.md) | Reviews a PRD cold: gaps, risky assumptions, missing metrics, scored with fixes. Read-only. | `Read, Glob, Grep, WebSearch, WebFetch` | `inherit` |
+| [`backlog-builder`](../agents/backlog-builder.md) | Turns a PRD into epics and INVEST-checked stories with Given/When/Then acceptance criteria, plus a Jira/Linear CSV. | `Read, Write, Edit, Glob, Grep` | `inherit` |
+| [`feature-builder`](../agents/feature-builder.md) | Builds one feature at a time from docs/specs/, with tests and a passing build. Stage 5 of PRD → Production. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
+| [`data-analyst`](../agents/data-analyst.md) | Runs an analytics question end to end on a data file: checks, analysis, charts and an answer-first readout. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
+| [`clinical-trial-landscape-scout`](../agents/clinical-trial-landscape-scout.md) | Maps the ClinicalTrials.gov landscape for a condition or drug class: sponsors, phases, endpoints, stops, white space. | `Read, Write, Bash, WebFetch, WebSearch` | `inherit` |
+| [`security-compliance-auditor`](../agents/security-compliance-auditor.md) | Read-only audit of a codebase: auth, RLS, validation, secrets, LLM risks, and Part 11 / ALCOA+ where relevant. | `Read, Glob, Grep, Bash` | `inherit` |
+| [`release-notes-writer`](../agents/release-notes-writer.md) | Reads git history and writes customer release notes, a changelog entry and an announcement. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
+| [`ai-eval-builder`](../agents/ai-eval-builder.md) | Builds an eval suite for an AI feature: labeled test set, rubric, LLM judge, release gates and a runnable script. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
 
 ### `mockup-generator`
 
@@ -100,6 +108,21 @@ Two ways:
 **How it works:** runs a six-phase workflow — *ingest the PRD → plan a screen inventory & flow map (and check in with you) → establish a shared design system → build the mockups → self-review against a checklist → hand off with assumptions and open questions logged*. Output is plain HTML + Tailwind CDN + vanilla JS + Lucide icons, organized under a `mockups/` directory with a hub `index.html`, one file per screen, shared `assets/`, and its own traceability `README.md`.
 
 See [`mockup-generator.md`](../agents/mockup-generator.md) for the full persona definition, or this folder's prior worked example (an 11-screen prototype generated from a hotel-booking-cancellation PRD) for a sense of the depth and polish it aims for.
+
+---
+
+### How the agents fit with the skills
+
+| Stage | Skill(s) | Sub-agent |
+| --- | --- | --- |
+| Define | `prd-writer`, `prd-evaluator` | `prd-red-team-reviewer` (independent critique), `backlog-builder` (stories) |
+| Prototype | | `mockup-generator` |
+| Build | PRD → Production pack | `feature-builder` (Stage 5), `security-compliance-auditor` (before launch) |
+| Ship | | `release-notes-writer` |
+| Measure | Product Analytics pack | `data-analyst` (runs the pack end to end), `ai-eval-builder` (for AI features) |
+| Clinical | Pharma & Clinical pack | `clinical-trial-landscape-scout` |
+
+Read-only agents (`prd-red-team-reviewer`, `security-compliance-auditor`) have no Write or Edit tools, so they can't change your files.
 
 ---
 

@@ -60,6 +60,14 @@ Four skills for life-sciences product, data and clinical-operations teams, using
 | Sub-agent | What it does |
 |---|---|
 | [`mockup-generator`](agents/mockup-generator.md) | Turns a PRD into a set of high-fidelity, clickable HTML mockups |
+| [`prd-red-team-reviewer`](agents/prd-red-team-reviewer.md) | Reviews a PRD cold: gaps, risky assumptions, missing metrics, scored with fixes. Read-only. |
+| [`backlog-builder`](agents/backlog-builder.md) | Turns a PRD into epics and INVEST-checked stories with Given/When/Then acceptance criteria, plus a Jira/Linear CSV. |
+| [`feature-builder`](agents/feature-builder.md) | Builds one feature at a time from docs/specs/, with tests and a passing build. Stage 5 of PRD → Production. |
+| [`data-analyst`](agents/data-analyst.md) | Runs an analytics question end to end on a data file: checks, analysis, charts and an answer-first readout. |
+| [`clinical-trial-landscape-scout`](agents/clinical-trial-landscape-scout.md) | Maps the ClinicalTrials.gov landscape for a condition or drug class: sponsors, phases, endpoints, stops, white space. |
+| [`security-compliance-auditor`](agents/security-compliance-auditor.md) | Read-only audit of a codebase: auth, RLS, validation, secrets, LLM risks, and Part 11 / ALCOA+ where relevant. |
+| [`release-notes-writer`](agents/release-notes-writer.md) | Reads git history and writes customer release notes, a changelog entry and an announcement. |
+| [`ai-eval-builder`](agents/ai-eval-builder.md) | Builds an eval suite for an AI feature: labeled test set, rubric, LLM judge, release gates and a runnable script. |
 
 **How they fit together:** `market-research` + `user-research` → `prd-writer` → `prd-evaluator` → `mockup-generator` for a clickable prototype, or the PRD → Production pack to build the real app
 
