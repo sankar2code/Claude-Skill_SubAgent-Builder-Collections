@@ -46,12 +46,13 @@ Six skills that take an analytics question from vague request to decision-ready 
 
 ### Pharma & Clinical pack
 
-Three skills for life-sciences product, data and clinical-operations teams, using only public data and published frameworks. [Read the pack guide →](docs/pharma-clinical.md)
+Four skills for life-sciences product, data and clinical-operations teams, using only public data and published frameworks. [Read the pack guide →](docs/pharma-clinical.md)
 
 | Skill | What it does |
 |---|---|
 | [`trial-failure-investigator`](skills/trial-failure-investigator/SKILL.md) | NCT ID → why the trial stopped: evidence from ClinicalTrials.gov and PubMed (`fetch_trial.py`), ranked hypotheses labeled fact / inference / hypothesis, with counter-arguments |
 | [`gxp-part11-checker`](skills/gxp-part11-checker/SKILL.md) | Gap assessment of a system, feature or AI tool against 21 CFR Part 11, EU Annex 11 and ALCOA+, with fixes written as testable requirements |
+| [`trial-eligibility-matcher`](skills/trial-eligibility-matcher/SKILL.md) | Screens a de-identified patient against trial criteria, or finds recruiting trials (`search_trials.py`, `fetch_criteria.py`); deterministic checker with citation and span checks (`check_criteria.py`) |
 | [`clinical-ai-evaluation-design`](skills/clinical-ai-evaluation-design/SKILL.md) | Monitoring signal → governance action, escalation pathway, trial design and estimand for clinical AI (Fosset et al., PLOS Digital Health 2026) |
 
 ### Sub-agents

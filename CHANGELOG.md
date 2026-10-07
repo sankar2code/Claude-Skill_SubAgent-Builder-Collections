@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.5.0 (October 2026)
+- Added `trial-eligibility-matcher` to the Pharma & Clinical pack, based on my Agentic Clinical Trial Matching product: `search_trials.py` (find recruiting trials), `fetch_criteria.py` (eligibility text from ClinicalTrials.gov), and `check_criteria.py` (deterministic rules check: citation required for Met, whole-token span check, conflicts, time windows, confidence floor, as-of replay).
+
 ## v1.4.0 (October 2026)
 - Added the **Pharma & Clinical pack**: `trial-failure-investigator` (with `fetch_trial.py` for ClinicalTrials.gov v2 and PubMed), `gxp-part11-checker`, `clinical-ai-evaluation-design`, plus `docs/pharma-clinical.md`.
 
