@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 (October 2026)
+- Added the **PRD → Production pack**: `engineering-planner`, `implementation-specs`, `security-foundation`, `frontend-setup`, `design-system`, plus `docs/prd-to-production.md`.
+- `frontend-setup` updated to Next.js 16, React 19 and TypeScript (template build-tested).
+- `security-foundation` generalized: route lists, limits and resources are derived from your specs (ContractIQ values kept as examples); uses `proxy.ts` on Next.js 16.
+- Consistent stage order and file paths across the pack, with an approval gate after every stage.
+
 ## v1.1.0 (October 2026)
 - Restructured into the standard layout: `skills/<name>/SKILL.md` and `agents/<name>.md`, so everything installs directly in Claude Code and claude.ai.
 - Renamed skills: `prd-v2` → `prd-writer`, `prd-evaluator-v5` → `prd-evaluator`.

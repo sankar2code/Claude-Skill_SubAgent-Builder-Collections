@@ -1,11 +1,14 @@
 {
   "name": "sankar2code",
-  "owner": { "name": "Sankar Kumar Palaniappan", "url": "https://sankar.work" },
+  "owner": {
+    "name": "Sankar Kumar Palaniappan",
+    "url": "https://sankar.work"
+  },
   "plugins": [
     {
       "name": "pm-builder-kit",
       "source": "./",
-      "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market research, user research, and PRD-to-mockup generation."
+      "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market research, user research, PRD-to-mockup generation, and a PRD → Production pack that takes a PRD to a secure Next.js + Supabase app."
     }
   ]
 }
