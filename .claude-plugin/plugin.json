@@ -2,8 +2,20 @@
   "name": "pm-builder-kit",
   "version": "1.1.0",
   "description": "Claude skills and sub-agents for product managers: PRD writing and evaluation, market research, user research, and PRD-to-mockup generation.",
-  "author": { "name": "Sankar Kumar Palaniappan", "url": "https://sankar.work" },
+  "author": {
+    "name": "Sankar Kumar Palaniappan",
+    "url": "https://sankar.work"
+  },
   "homepage": "https://sankar.work",
   "repository": "https://github.com/sankar2code/Claude-Skill_SubAgent-Builder-Collections",
-  "keywords": ["product-management", "prd", "market-research", "user-research", "mockups", "skills", "subagents"]
+  "keywords": [
+    "product-management",
+    "prd",
+    "market-research",
+    "user-research",
+    "mockups",
+    "skills",
+    "subagents"
+  ],
+  "license": "MIT"
 }

@@ -68,4 +68,8 @@ CHANGELOG.md
 
 Issues and pull requests are welcome. New skills go in `skills/<name>/SKILL.md` with a `name` and a trigger-rich `description` in the frontmatter; new sub-agents go in `agents/<name>.md`.
 
+## License
+
+[MIT](LICENSE): free to use, modify and share, including commercially. Please keep the copyright notice.
+
 ⭐ If this helps you, star the repo and share it with your team.

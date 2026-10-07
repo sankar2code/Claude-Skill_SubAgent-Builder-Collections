@@ -273,8 +273,7 @@ Have suggestions or improvements?
 
 ## 📄 License
 
-This documentation is created by Sankar and shared as a learning resource.  
-Feel free to reference and learn from this collection.
+Released under the [MIT License](../LICENSE). Free to use, modify and share; please keep the copyright notice.
 
 ---
 
