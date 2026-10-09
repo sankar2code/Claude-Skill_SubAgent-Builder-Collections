@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 634" font-family="Inter, Arial, sans-serif"><rect width="760" height="634" fill="#fff"/>
+<text x="70" y="34" font-size="15" font-weight="700" fill="#0f172a">Prioritization matrix (RICE inputs)</text>
+<rect x="70" y="70" width="620" height="400" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="380.0" y1="70" x2="380.0" y2="470" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<line x1="70" y1="270.0" x2="690" y2="270.0" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="78" y="88" text-anchor="start" font-size="11" font-weight="800" fill="#059669" opacity=".8">QUICK WINS</text>
+<text x="682" y="88" text-anchor="end" font-size="11" font-weight="800" fill="#2563eb" opacity=".8">BIG BETS</text>
+<text x="78" y="462" text-anchor="start" font-size="11" font-weight="800" fill="#64748b" opacity=".8">FILL-INS</text>
+<text x="682" y="462" text-anchor="end" font-size="11" font-weight="800" fill="#dc2626" opacity=".8">MONEY PITS</text>
+<text x="380.0" y="530" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Effort →</text>
+<text x="22" y="270.0" text-anchor="middle" font-size="12" font-weight="700" fill="#334155" transform="rotate(-90 22 270.0)">Value (reach × impact) →</text>
+<circle cx="177.8" cy="318.5" r="30.0" fill="#059669" fill-opacity=".25" stroke="#059669" stroke-width="2"/>
+<text x="177.8" y="322.5" text-anchor="middle" font-size="11" font-weight="800" fill="#059669">I4</text>
+<circle cx="393.5" cy="227.6" r="27.9" fill="#059669" fill-opacity=".25" stroke="#059669" stroke-width="2"/>
+<text x="393.5" y="231.6" text-anchor="middle" font-size="11" font-weight="800" fill="#059669">I1</text>
+<circle cx="501.3" cy="106.4" r="27.9" fill="#d97706" fill-opacity=".25" stroke="#d97706" stroke-width="2"/>
+<text x="501.3" y="110.4" text-anchor="middle" font-size="11" font-weight="800" fill="#d97706">I2</text>
+<circle cx="114.1" cy="348.8" r="27.9" fill="#059669" fill-opacity=".25" stroke="#059669" stroke-width="2"/>
+<text x="114.1" y="352.8" text-anchor="middle" font-size="11" font-weight="800" fill="#059669">I3</text>
+<circle cx="423.3" cy="268.0" r="26.3" fill="#dc2626" fill-opacity=".25" stroke="#dc2626" stroke-width="2"/>
+<text x="423.3" y="272.0" text-anchor="middle" font-size="11" font-weight="800" fill="#dc2626">I5</text>
+<circle cx="609.1" cy="409.4" r="22.6" fill="#d97706" fill-opacity=".25" stroke="#d97706" stroke-width="2"/>
+<text x="609.1" y="413.4" text-anchor="middle" font-size="11" font-weight="800" fill="#d97706">I6</text>
+<circle cx="76" cy="548" r="6" fill="#059669" fill-opacity=".3" stroke="#059669"/><text x="86" y="552" font-size="10.5" fill="#334155">confidence ≥ 0.8</text>
+<circle cx="196" cy="548" r="6" fill="#d97706" fill-opacity=".3" stroke="#d97706"/><text x="206" y="552" font-size="10.5" fill="#334155">0.5–0.8</text>
+<circle cx="316" cy="548" r="6" fill="#dc2626" fill-opacity=".3" stroke="#dc2626"/><text x="326" y="552" font-size="10.5" fill="#334155">< 0.5</text>
+<text x="690" y="552" text-anchor="end" font-size="10.5" fill="#64748b">bubble size = reach</text>
+<text x="70.0" y="582" font-size="11" fill="#334155"><tspan font-weight="800">I1</tspan>  Payer API integration (top 5 payers)</text>
+<text x="380.0" y="582" font-size="11" fill="#334155"><tspan font-weight="800">I2</tspan>  Field extraction and pre-fill</text>
+<text x="70.0" y="600" font-size="11" fill="#334155"><tspan font-weight="800">I3</tspan>  Human review queue</text>
+<text x="380.0" y="600" font-size="11" fill="#334155"><tspan font-weight="800">I4</tspan>  Status tracker in the schedule view</text>
+<text x="70.0" y="618" font-size="11" fill="#334155"><tspan font-weight="800">I5</tspan>  Missing-document checker</text>
+<text x="380.0" y="618" font-size="11" fill="#334155"><tspan font-weight="800">I6</tspan>  Payer coverage beyond top 5</text>
+</svg>

@@ -1,0 +1,381 @@
+{
+  "_note": "Illustrative example for a fictional company (Helio Health). Replace with your own. IDs: S source, E evidence, N need, G goal, O opportunity, C choice, B bet, I initiative, K KPI.",
+  "meta": {
+    "product": "Helio Prior-Auth Assistant (fictional)",
+    "objective": "Cut the time clinics spend getting prior-authorization decisions, and turn it into a second revenue line",
+    "owner": "VP Product",
+    "as_of": "2026-10-09",
+    "mode": "full",
+    "prioritization": "rice",
+    "balance": "Core: B2. Adjacent: B1, B3. Total appetite 18 weeks against about 20 weeks of capacity for two squads [ESTIMATE]. No transformational bet this quarter, by choice."
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "12 customer interviews",
+      "date": "2026-08-30",
+      "type": "primary-internal"
+    },
+    {
+      "id": "S2",
+      "title": "Outcome survey, 80 clinics",
+      "date": "2026-09-15",
+      "type": "primary-internal"
+    },
+    {
+      "id": "S3",
+      "title": "Support tickets tagged prior-auth, Q3",
+      "date": "2026-09-30",
+      "type": "primary-internal"
+    },
+    {
+      "id": "S4",
+      "title": "Payer API rule announcement",
+      "date": "2026-06-01",
+      "type": "primary-external"
+    },
+    {
+      "id": "S5",
+      "title": "Pilot pricing conversations (6 clinics)",
+      "date": "2026-10-02",
+      "type": "primary-internal"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "text": "9 of 12 interviewees re-type patient data into payer portals",
+      "source": "S1",
+      "label": "FACT",
+      "strength": "strong"
+    },
+    {
+      "id": "E2",
+      "text": "Time to payer decision: importance 9.0, satisfaction 3.3 (opportunity 14.7)",
+      "source": "S2",
+      "label": "FACT",
+      "strength": "strong"
+    },
+    {
+      "id": "E3",
+      "text": "Denied-claim risk: opportunity score 12.3",
+      "source": "S2",
+      "label": "FACT",
+      "strength": "strong"
+    },
+    {
+      "id": "E4",
+      "text": "31% of Q3 support tickets mention prior-auth status",
+      "source": "S3",
+      "label": "FACT",
+      "strength": "strong"
+    },
+    {
+      "id": "E5",
+      "text": "Payers must offer electronic prior-auth endpoints",
+      "source": "S4",
+      "label": "FACT",
+      "strength": "moderate"
+    },
+    {
+      "id": "E6",
+      "text": "4 of 6 clinics said they would pay $250-$400 per month",
+      "source": "S5",
+      "label": "ESTIMATE",
+      "strength": "weak"
+    },
+    {
+      "id": "E7",
+      "text": "Staff worry about wrong submissions being sent automatically",
+      "source": "S1",
+      "label": "FACT",
+      "strength": "moderate"
+    }
+  ],
+  "needs": [
+    {
+      "id": "N1",
+      "text": "Minimize time to get a payer decision",
+      "segment": "Clinics 20-200",
+      "importance": 9,
+      "evidence": [
+        "E2",
+        "E4"
+      ],
+      "label": "FACT"
+    },
+    {
+      "id": "N2",
+      "text": "Stop re-entering patient data into portals",
+      "segment": "Clinics 20-50",
+      "importance": 8,
+      "evidence": [
+        "E1"
+      ],
+      "label": "FACT"
+    },
+    {
+      "id": "N3",
+      "text": "Reduce the likelihood of a denied claim",
+      "segment": "Clinics 20-200",
+      "importance": 8,
+      "evidence": [
+        "E3"
+      ],
+      "label": "FACT"
+    },
+    {
+      "id": "N4",
+      "text": "Trust that nothing is submitted without review",
+      "segment": "Clinics 20-200",
+      "importance": 7,
+      "evidence": [
+        "E7"
+      ],
+      "label": "FACT"
+    }
+  ],
+  "goals": [
+    {
+      "id": "G1",
+      "text": "Clinics get payer decisions faster",
+      "metric": "K1",
+      "label": "HYPOTHESIS"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "O1",
+      "text": "Requests are slow because data is re-typed and incomplete",
+      "needs": [
+        "N1",
+        "N2"
+      ],
+      "goal": "G1"
+    },
+    {
+      "id": "O2",
+      "text": "Clinics cannot see where a request is stuck",
+      "needs": [
+        "N1"
+      ],
+      "goal": "G1"
+    },
+    {
+      "id": "O3",
+      "text": "Denials come from missing documentation",
+      "needs": [
+        "N3"
+      ],
+      "goal": "G1"
+    }
+  ],
+  "choices": [
+    {
+      "id": "C1",
+      "we_will": "Pre-fill requests from data already in the schedule",
+      "we_wont": "Build our own payer network or clearinghouse",
+      "rationale": "Our data is the advantage; networks are commodity"
+    },
+    {
+      "id": "C2",
+      "we_will": "Keep a human approval step on every submission",
+      "we_wont": "Auto-submit in year one",
+      "rationale": "Anxiety is the strongest force against switching (E7)"
+    }
+  ],
+  "bets": [
+    {
+      "id": "B1",
+      "title": "Auto-filled requests",
+      "hypothesis": "If we pre-fill requests from schedule data, staff time per request falls by half",
+      "opportunities": [
+        "O1"
+      ],
+      "success_metric": "K2",
+      "kill_criteria": "Field accuracy below 95% after 500 requests",
+      "appetite": "8 weeks",
+      "confidence": 0.6,
+      "label": "HYPOTHESIS"
+    },
+    {
+      "id": "B2",
+      "title": "Live status tracker",
+      "hypothesis": "If clinics can see request status, status tickets fall by 60%",
+      "opportunities": [
+        "O2"
+      ],
+      "success_metric": "K3",
+      "kill_criteria": "Fewer than 30% of clinics open the tracker weekly",
+      "appetite": "4 weeks",
+      "confidence": 0.8,
+      "label": "HYPOTHESIS"
+    },
+    {
+      "id": "B3",
+      "title": "Denial-risk check",
+      "hypothesis": "If we flag missing documents before submission, denials fall by 25%",
+      "opportunities": [
+        "O3"
+      ],
+      "success_metric": "K4",
+      "kill_criteria": "No measurable change in denial rate after one quarter",
+      "appetite": "6 weeks",
+      "confidence": 0.4,
+      "label": "HYPOTHESIS"
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "I1",
+      "title": "Payer API integration (top 5 payers)",
+      "bet": "B1",
+      "horizon": "now",
+      "reach": 120,
+      "impact": 2,
+      "confidence": 0.8,
+      "effort": 3,
+      "duration_weeks": 6,
+      "depends_on": []
+    },
+    {
+      "id": "I2",
+      "title": "Field extraction and pre-fill",
+      "bet": "B1",
+      "horizon": "now",
+      "reach": 120,
+      "impact": 3,
+      "confidence": 0.5,
+      "effort": 4,
+      "duration_weeks": 8,
+      "depends_on": [
+        "I1"
+      ]
+    },
+    {
+      "id": "I3",
+      "title": "Human review queue",
+      "bet": "B1",
+      "horizon": "now",
+      "reach": 120,
+      "impact": 1,
+      "confidence": 0.8,
+      "effort": 1,
+      "duration_weeks": 3,
+      "depends_on": [
+        "I2"
+      ]
+    },
+    {
+      "id": "I4",
+      "title": "Status tracker in the schedule view",
+      "bet": "B2",
+      "horizon": "now",
+      "reach": 150,
+      "impact": 1,
+      "confidence": 0.8,
+      "effort": 1,
+      "duration_weeks": 4,
+      "depends_on": [
+        "I1"
+      ]
+    },
+    {
+      "id": "I5",
+      "title": "Missing-document checker",
+      "bet": "B3",
+      "horizon": "next",
+      "reach": 100,
+      "impact": 2,
+      "confidence": 0.4,
+      "effort": 3,
+      "duration_weeks": 6,
+      "depends_on": [
+        "I2"
+      ]
+    },
+    {
+      "id": "I6",
+      "title": "Payer coverage beyond top 5",
+      "bet": "B1",
+      "horizon": "later",
+      "reach": 60,
+      "impact": 1,
+      "confidence": 0.5,
+      "effort": 5,
+      "duration_weeks": 10,
+      "depends_on": [
+        "I1"
+      ]
+    }
+  ],
+  "kpis": [
+    {
+      "id": "K1",
+      "name": "Median days to payer decision",
+      "type": "north_star",
+      "parent": null,
+      "baseline": "6.5 days",
+      "target": "3 days",
+      "source": "S3",
+      "owner_role": "Product lead"
+    },
+    {
+      "id": "K2",
+      "name": "Staff minutes per request",
+      "type": "input",
+      "parent": "K1",
+      "baseline": "[UNKNOWN] - measure in pilot",
+      "target": "-50%",
+      "owner_role": "Product lead"
+    },
+    {
+      "id": "K3",
+      "name": "Prior-auth status tickets per 100 requests",
+      "type": "input",
+      "parent": "K1",
+      "baseline": "14",
+      "target": "6",
+      "source": "S3",
+      "owner_role": "Support lead"
+    },
+    {
+      "id": "K4",
+      "name": "Denial rate",
+      "type": "input",
+      "parent": "K1",
+      "baseline": "[UNKNOWN]",
+      "target": "-25%",
+      "owner_role": "Product lead"
+    },
+    {
+      "id": "K5",
+      "name": "Submissions corrected after review",
+      "type": "guardrail",
+      "parent": "K2",
+      "baseline": "n/a",
+      "target": "< 5%",
+      "owner_role": "Clinical ops"
+    },
+    {
+      "id": "K6",
+      "name": "Paying clinics on the add-on",
+      "type": "input",
+      "parent": "K1",
+      "baseline": "0",
+      "target": "40 in 12 months",
+      "owner_role": "GM"
+    }
+  ],
+  "scorecard": [
+    {
+      "bet": "B2",
+      "review_date": "2027-01-15",
+      "metric": "K3",
+      "result": "Status tickets 14 -> 7 per 100 requests in pilot",
+      "label": "FACT",
+      "decision": "scale",
+      "learned": "Clinics open the tracker daily; the remaining tickets are about denials, not status"
+    }
+  ]
+}

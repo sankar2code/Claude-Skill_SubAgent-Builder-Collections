@@ -1,0 +1,14 @@
+Method: RICE = reach x impact x confidence / effort
+Stability: inputs jittered +/-25% over 1000 runs; share of runs in top 3
+
+  #  ID   Initiative                                    Score    Top-3  Notes
+  1  I4   Status tracker in the schedule view           120.0     100%  needs I1 first
+  2  I3   Human review queue                             96.0      98%  needs I2 first
+  3  I1   Payer API integration (top 5 payers)           64.0      78%  
+  4  I2   Field extraction and pre-fill                  45.0      24%  
+  5  I5   Missing-document checker                       26.7       1%  
+  6  I6   Payer coverage beyond top 5                     6.0       0%  
+
+Wrote score and rank into examples/sample-output/canvas.json
+
+RESULT: ranked. Scores rank options; the team still decides.

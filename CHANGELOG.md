@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.9.0 (October 2026)
+- Added the **Product Strategy Canvas pack**: `product-strategy-canvas` skill with 12 step playbooks (evidence intake, needs map, opportunity tree, strategic choices, product bets, prioritization, portfolio balance, outcome roadmap, dependency map, KPI tree, decision brief, bet scorecard) and Quick / Full / Review modes.
+- One `canvas.json` with linked IDs (S → E → N → O → B → I → K); `canvas_check.py` finds broken links, orphans and uncovered needs, and `--why` traces any roadmap item back to its evidence.
+- Real visuals: `render_canvas.py` builds an interactive canvas page and five SVGs (opportunity tree, prioritization matrix, Now / Next / Later roadmap, dependency graph, KPI tree).
+- `prioritize.py` (RICE / ICE / WSJF with stability test and dependency-aware flags), `dependencies.py` (cycles, critical path, slack), `export.py` (Jira/Linear CSV, PRD inputs, deck brief).
+- Reuses Opportunity Discovery and Strategy outputs instead of duplicating them; fictional worked example with every rendered output; 8 eval prompts.
+
 ## v1.8.0 (October 2026)
 - Added the **Opportunity Discovery pack**: `opportunity-finder` skill with 21 method playbooks across five lenses (Customer, Offer, Capabilities & Assets, Market, Strategic Choice), including a new `why-now-shift` method for technology, AI, regulation and behavior changes.
 - Routes by starting point (customer problem, capability, market shift, idea, service business, portfolio, full scan) instead of running every framework.

@@ -1,0 +1,22 @@
+Issue Type,Summary,Description,Epic Link,Labels,Priority Rank
+Epic,B1 Auto-filled requests,"Hypothesis: If we pre-fill requests from schedule data, staff time per request falls by half
+Success metric: Staff minutes per request (baseline [UNKNOWN] - measure in pilot, target -50%)
+Kill criteria: Field accuracy below 95% after 500 requests
+Appetite: 8 weeks
+Evidence: E2 Time to payer decision: importance 9.0, satisfaction 3.3 (opportunity 14.7) [FACT S2]; E4 31% of Q3 support tickets mention prior-auth status [FACT S3]; E1 9 of 12 interviewees re-type patient data into payer portals [FACT S1]",,product-bet,
+Story,I3 Human review queue,Part of B1. Horizon: now. Estimate: 3 weeks. Depends on: I2. Acceptance criteria: to be written with backlog-builder.,B1 Auto-filled requests,now,2
+Story,I1 Payer API integration (top 5 payers),Part of B1. Horizon: now. Estimate: 6 weeks. Acceptance criteria: to be written with backlog-builder.,B1 Auto-filled requests,now,3
+Story,I2 Field extraction and pre-fill,Part of B1. Horizon: now. Estimate: 8 weeks. Depends on: I1. Acceptance criteria: to be written with backlog-builder.,B1 Auto-filled requests,now,4
+Story,I6 Payer coverage beyond top 5,Part of B1. Horizon: later. Estimate: 10 weeks. Depends on: I1. Acceptance criteria: to be written with backlog-builder.,B1 Auto-filled requests,later,6
+Epic,B2 Live status tracker,"Hypothesis: If clinics can see request status, status tickets fall by 60%
+Success metric: Prior-auth status tickets per 100 requests (baseline 14, target 6)
+Kill criteria: Fewer than 30% of clinics open the tracker weekly
+Appetite: 4 weeks
+Evidence: E2 Time to payer decision: importance 9.0, satisfaction 3.3 (opportunity 14.7) [FACT S2]; E4 31% of Q3 support tickets mention prior-auth status [FACT S3]",,product-bet,
+Story,I4 Status tracker in the schedule view,Part of B2. Horizon: now. Estimate: 4 weeks. Depends on: I1. Acceptance criteria: to be written with backlog-builder.,B2 Live status tracker,now,1
+Epic,B3 Denial-risk check,"Hypothesis: If we flag missing documents before submission, denials fall by 25%
+Success metric: Denial rate (baseline [UNKNOWN], target -25%)
+Kill criteria: No measurable change in denial rate after one quarter
+Appetite: 6 weeks
+Evidence: E3 Denied-claim risk: opportunity score 12.3 [FACT S2]",,product-bet,
+Story,I5 Missing-document checker,Part of B3. Horizon: next. Estimate: 6 weeks. Depends on: I2. Acceptance criteria: to be written with backlog-builder.,B3 Denial-risk check,next,5

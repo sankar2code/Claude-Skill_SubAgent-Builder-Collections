@@ -1,0 +1,226 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Strategy Canvas</title><style>
+:root{--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--bg:#f8fafc}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);padding:24px 16px 60px}
+.w{max-width:1280px;margin:0 auto} h1{margin:0;font-size:26px} h2{font-size:17px;margin:34px 0 10px} .lead{color:#334155;margin:6px 0} .meta{color:var(--mut);font-size:13px}
+.note{display:inline-block;margin-top:8px;font-size:12px;border-radius:10px;padding:4px 10px;background:#ecfeff;color:#155e75}
+.chain{display:grid;grid-template-columns:repeat(6,minmax(180px,1fr));gap:10px;overflow-x:auto;padding-bottom:6px}
+.col h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:0 0 8px;display:flex;justify-content:space-between} .col h3 i{font-style:normal;background:#e2e8f0;border-radius:8px;padding:0 6px}
+.cd{background:#fff;border:1px solid var(--line);border-left:4px solid var(--bc,#cbd5e1);border-radius:9px;padding:8px 10px;margin-bottom:8px;cursor:pointer;transition:.15s}
+.cd b{font-size:11px;color:var(--bc,#475569)} .cd span{display:block;font-size:12.5px;line-height:1.35;margin-top:2px} .cd small{display:block;color:var(--mut);font-size:10.5px;margin-top:4px}
+.chain.sel .cd{opacity:.25} .chain.sel .cd.on{opacity:1;box-shadow:0 0 0 2px var(--bc,#0ea5e9)}
+.hint{font-size:12px;color:var(--mut);margin:-4px 0 8px}
+.fig{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;overflow-x:auto} .fig svg{width:100%;height:auto;min-width:640px;display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px} .two>div{min-width:0} .two .fig svg{min-width:0} @media(max-width:900px){.two{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px} th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top} th{background:#0f172a;color:#fff;font-size:12px}
+.bets{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px} .bet{background:#fff;border:1px solid var(--line);border-top:4px solid var(--bc);border-radius:10px;padding:12px} .bet b{color:var(--bc)} .bet p{margin:6px 0;font-size:13px} .bet small{color:var(--mut);font-size:11.5px}
+.dc{border-radius:8px;padding:2px 8px;font-weight:700;font-size:12px;background:#e2e8f0} .dc.scale{background:#d1fae5;color:#065f46} .dc.iterate{background:#fef3c7;color:#92400e} .dc.kill{background:#fee2e2;color:#991b1b}
+@media print{body{background:#fff} .chain.sel .cd{opacity:1}}
+</style></head><body><div class="w">
+<h1>Product Strategy Canvas</h1>
+<p class="lead"><b>Helio Prior-Auth Assistant (fictional)</b>: Cut the time clinics spend getting prior-authorization decisions, and turn it into a second revenue line</p>
+<p class="meta">Owner: VP Product · as of 2026-10-09 · prioritization: RICE</p>
+<span class="note">Run canvas_check.py for traceability gaps before sharing</span>
+<h2>The chain: evidence to outcomes</h2><p class="hint">Click any card to light up everything it connects to. Click again to clear.</p>
+<div class="chain" id="chain"><div class="col"><h3>Evidence<i>7</i></h3><div class="cd" data-id="E1"><b>E1</b><span>9 of 12 interviewees re-type patient data into payer portals</span><small>FACT · S1 · strong</small></div><div class="cd" data-id="E2"><b>E2</b><span>Time to payer decision: importance 9.0, satisfaction 3.3 (opportunity 14.7)</span><small>FACT · S2 · strong</small></div><div class="cd" data-id="E3"><b>E3</b><span>Denied-claim risk: opportunity score 12.3</span><small>FACT · S2 · strong</small></div><div class="cd" data-id="E4"><b>E4</b><span>31% of Q3 support tickets mention prior-auth status</span><small>FACT · S3 · strong</small></div><div class="cd" data-id="E5"><b>E5</b><span>Payers must offer electronic prior-auth endpoints</span><small>FACT · S4 · moderate</small></div><div class="cd" data-id="E6"><b>E6</b><span>4 of 6 clinics said they would pay $250-$400 per month</span><small>ESTIMATE · S5 · weak</small></div><div class="cd" data-id="E7"><b>E7</b><span>Staff worry about wrong submissions being sent automatically</span><small>FACT · S1 · moderate</small></div></div><div class="col"><h3>Needs<i>4</i></h3><div class="cd" data-id="N1"><b>N1</b><span>Minimize time to get a payer decision</span><small>importance 9 · Clinics 20-200</small></div><div class="cd" data-id="N2"><b>N2</b><span>Stop re-entering patient data into portals</span><small>importance 8 · Clinics 20-50</small></div><div class="cd" data-id="N3"><b>N3</b><span>Reduce the likelihood of a denied claim</span><small>importance 8 · Clinics 20-200</small></div><div class="cd" data-id="N4"><b>N4</b><span>Trust that nothing is submitted without review</span><small>importance 7 · Clinics 20-200</small></div></div><div class="col"><h3>Opportunities<i>3</i></h3><div class="cd" data-id="O1"><b>O1</b><span>Requests are slow because data is re-typed and incomplete</span><small></small></div><div class="cd" data-id="O2"><b>O2</b><span>Clinics cannot see where a request is stuck</span><small></small></div><div class="cd" data-id="O3"><b>O3</b><span>Denials come from missing documentation</span><small></small></div></div><div class="col"><h3>Bets<i>3</i></h3><div class="cd" data-id="B1" style="--bc:#0ea5e9"><b>B1</b><span>Auto-filled requests</span><small>confidence 0.6 · appetite 8 weeks</small></div><div class="cd" data-id="B2" style="--bc:#8b5cf6"><b>B2</b><span>Live status tracker</span><small>confidence 0.8 · appetite 4 weeks</small></div><div class="cd" data-id="B3" style="--bc:#f97316"><b>B3</b><span>Denial-risk check</span><small>confidence 0.4 · appetite 6 weeks</small></div></div><div class="col"><h3>Roadmap<i>6</i></h3><div class="cd" data-id="I1" style="--bc:#0ea5e9"><b>I1</b><span>Payer API integration (top 5 payers)</span><small>NOW · 6 wks · rank 3</small></div><div class="cd" data-id="I2" style="--bc:#0ea5e9"><b>I2</b><span>Field extraction and pre-fill</span><small>NOW · 8 wks · rank 4</small></div><div class="cd" data-id="I3" style="--bc:#0ea5e9"><b>I3</b><span>Human review queue</span><small>NOW · 3 wks · rank 2</small></div><div class="cd" data-id="I4" style="--bc:#8b5cf6"><b>I4</b><span>Status tracker in the schedule view</span><small>NOW · 4 wks · rank 1</small></div><div class="cd" data-id="I5" style="--bc:#f97316"><b>I5</b><span>Missing-document checker</span><small>NEXT · 6 wks · rank 5</small></div><div class="cd" data-id="I6" style="--bc:#0ea5e9"><b>I6</b><span>Payer coverage beyond top 5</span><small>LATER · 10 wks · rank 6</small></div></div><div class="col"><h3>KPIs<i>6</i></h3><div class="cd" data-id="K1"><b>K1</b><span>Median days to payer decision</span><small>north star · 6.5 days → 3 days</small></div><div class="cd" data-id="K2"><b>K2</b><span>Staff minutes per request</span><small>input · [UNKNOWN] - measure in pilot → -50%</small></div><div class="cd" data-id="K3"><b>K3</b><span>Prior-auth status tickets per 100 requests</span><small>input · 14 → 6</small></div><div class="cd" data-id="K4"><b>K4</b><span>Denial rate</span><small>input · [UNKNOWN] → -25%</small></div><div class="cd" data-id="K5"><b>K5</b><span>Submissions corrected after review</span><small>guardrail · n/a → &lt; 5%</small></div><div class="cd" data-id="K6"><b>K6</b><span>Paying clinics on the add-on</span><small>input · 0 → 40 in 12 months</small></div></div></div>
+<h2>Choices</h2><table><tr><th>We will</th><th>We won't</th><th>Why</th></tr><tr><td>Pre-fill requests from data already in the schedule</td><td>Build our own payer network or clearinghouse</td><td>Our data is the advantage; networks are commodity</td></tr><tr><td>Keep a human approval step on every submission</td><td>Auto-submit in year one</td><td>Anxiety is the strongest force against switching (E7)</td></tr></table>
+<h2>Product bets</h2><div class="bets"><div class="bet" style="--bc:#0ea5e9"><b>B1 · Auto-filled requests</b><p>If we pre-fill requests from schedule data, staff time per request falls by half</p><small>Success: K2 · Kill if: Field accuracy below 95% after 500 requests · Appetite: 8 weeks</small></div><div class="bet" style="--bc:#8b5cf6"><b>B2 · Live status tracker</b><p>If clinics can see request status, status tickets fall by 60%</p><small>Success: K3 · Kill if: Fewer than 30% of clinics open the tracker weekly · Appetite: 4 weeks</small></div><div class="bet" style="--bc:#f97316"><b>B3 · Denial-risk check</b><p>If we flag missing documents before submission, denials fall by 25%</p><small>Success: K4 · Kill if: No measurable change in denial rate after one quarter · Appetite: 6 weeks</small></div></div>
+<h2>Opportunity tree</h2><div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1058 454" font-family="Inter, Arial, sans-serif"><rect width="1058" height="454" fill="#fff"/>
+<text x="20" y="30" font-size="12" font-weight="800" fill="#64748b" letter-spacing="1">GOAL</text>
+<text x="286" y="30" font-size="12" font-weight="800" fill="#64748b" letter-spacing="1">OPPORTUNITIES</text>
+<text x="552" y="30" font-size="12" font-weight="800" fill="#64748b" letter-spacing="1">BETS</text>
+<text x="818" y="30" font-size="12" font-weight="800" fill="#64748b" letter-spacing="1">INITIATIVES</text>
+<path d="M240,235.0 C263.0,235.0 263.0,171.0 286,171.0" fill="none" stroke="#cbd5e1" stroke-width="2" opacity=".75"/>
+<path d="M240,235.0 C263.0,235.0 263.0,235.0 286,235.0" fill="none" stroke="#cbd5e1" stroke-width="2" opacity=".75"/>
+<path d="M240,235.0 C263.0,235.0 263.0,299.0 286,299.0" fill="none" stroke="#cbd5e1" stroke-width="2" opacity=".75"/>
+<path d="M506,171.0 C529.0,171.0 529.0,171.0 552,171.0" fill="none" stroke="#0ea5e9" stroke-width="2" opacity=".75"/>
+<path d="M506,235.0 C529.0,235.0 529.0,235.0 552,235.0" fill="none" stroke="#8b5cf6" stroke-width="2" opacity=".75"/>
+<path d="M506,299.0 C529.0,299.0 529.0,299.0 552,299.0" fill="none" stroke="#f97316" stroke-width="2" opacity=".75"/>
+<path d="M772,171.0 C795.0,171.0 795.0,75.0 818,75.0" fill="none" stroke="#0ea5e9" stroke-width="2" opacity=".75"/>
+<path d="M772,171.0 C795.0,171.0 795.0,139.0 818,139.0" fill="none" stroke="#0ea5e9" stroke-width="2" opacity=".75"/>
+<path d="M772,171.0 C795.0,171.0 795.0,203.0 818,203.0" fill="none" stroke="#0ea5e9" stroke-width="2" opacity=".75"/>
+<path d="M772,235.0 C795.0,235.0 795.0,267.0 818,267.0" fill="none" stroke="#8b5cf6" stroke-width="2" opacity=".75"/>
+<path d="M772,299.0 C795.0,299.0 795.0,331.0 818,331.0" fill="none" stroke="#f97316" stroke-width="2" opacity=".75"/>
+<path d="M772,171.0 C795.0,171.0 795.0,395.0 818,395.0" fill="none" stroke="#0ea5e9" stroke-width="2" opacity=".75"/>
+<rect x="20" y="210.0" width="220" height="50" rx="9" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="30" y="230.0" font-size="10" font-weight="800" fill="#7dd3fc">G1</text>
+<text x="30" y="247.0" font-size="11.5" fill="#fff">Clinics get payer decisions faster</text>
+<rect x="286" y="146.0" width="220" height="50" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="296" y="166.0" font-size="10" font-weight="800" fill="#cbd5e1">O1</text>
+<text x="296" y="183.0" font-size="11.5" fill="#0f172a">Requests are slow because data is…</text>
+<rect x="286" y="210.0" width="220" height="50" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="296" y="230.0" font-size="10" font-weight="800" fill="#cbd5e1">O2</text>
+<text x="296" y="247.0" font-size="11.5" fill="#0f172a">Clinics cannot see where a reques…</text>
+<rect x="286" y="274.0" width="220" height="50" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="296" y="294.0" font-size="10" font-weight="800" fill="#cbd5e1">O3</text>
+<text x="296" y="311.0" font-size="11.5" fill="#0f172a">Denials come from missing documen…</text>
+<rect x="552" y="146.0" width="220" height="50" rx="9" fill="#fff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="562" y="166.0" font-size="10" font-weight="800" fill="#0ea5e9">B1</text>
+<text x="562" y="183.0" font-size="11.5" fill="#0f172a">Auto-filled requests</text>
+<rect x="552" y="210.0" width="220" height="50" rx="9" fill="#fff" stroke="#8b5cf6" stroke-width="2"/>
+<text x="562" y="230.0" font-size="10" font-weight="800" fill="#8b5cf6">B2</text>
+<text x="562" y="247.0" font-size="11.5" fill="#0f172a">Live status tracker</text>
+<rect x="552" y="274.0" width="220" height="50" rx="9" fill="#fff" stroke="#f97316" stroke-width="2"/>
+<text x="562" y="294.0" font-size="10" font-weight="800" fill="#f97316">B3</text>
+<text x="562" y="311.0" font-size="11.5" fill="#0f172a">Denial-risk check</text>
+<rect x="818" y="50.0" width="220" height="50" rx="9" fill="#fff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="828" y="70.0" font-size="10" font-weight="800" fill="#0ea5e9">I1 · NOW</text>
+<text x="828" y="87.0" font-size="11.5" fill="#0f172a">Payer API integration (top 5 paye…</text>
+<rect x="818" y="114.0" width="220" height="50" rx="9" fill="#fff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="828" y="134.0" font-size="10" font-weight="800" fill="#0ea5e9">I2 · NOW</text>
+<text x="828" y="151.0" font-size="11.5" fill="#0f172a">Field extraction and pre-fill</text>
+<rect x="818" y="178.0" width="220" height="50" rx="9" fill="#fff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="828" y="198.0" font-size="10" font-weight="800" fill="#0ea5e9">I3 · NOW</text>
+<text x="828" y="215.0" font-size="11.5" fill="#0f172a">Human review queue</text>
+<rect x="818" y="242.0" width="220" height="50" rx="9" fill="#fff" stroke="#8b5cf6" stroke-width="2"/>
+<text x="828" y="262.0" font-size="10" font-weight="800" fill="#8b5cf6">I4 · NOW</text>
+<text x="828" y="279.0" font-size="11.5" fill="#0f172a">Status tracker in the schedule vi…</text>
+<rect x="818" y="306.0" width="220" height="50" rx="9" fill="#fff" stroke="#f97316" stroke-width="2"/>
+<text x="828" y="326.0" font-size="10" font-weight="800" fill="#f97316">I5 · NEXT</text>
+<text x="828" y="343.0" font-size="11.5" fill="#0f172a">Missing-document checker</text>
+<rect x="818" y="370.0" width="220" height="50" rx="9" fill="#fff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="828" y="390.0" font-size="10" font-weight="800" fill="#0ea5e9">I6 · LATER</text>
+<text x="828" y="407.0" font-size="11.5" fill="#0f172a">Payer coverage beyond top 5</text>
+</svg></div>
+<div class="two"><div><h2>Prioritization</h2><div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 634" font-family="Inter, Arial, sans-serif"><rect width="760" height="634" fill="#fff"/>
+<text x="70" y="34" font-size="15" font-weight="700" fill="#0f172a">Prioritization matrix (RICE inputs)</text>
+<rect x="70" y="70" width="620" height="400" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="380.0" y1="70" x2="380.0" y2="470" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<line x1="70" y1="270.0" x2="690" y2="270.0" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<text x="78" y="88" text-anchor="start" font-size="11" font-weight="800" fill="#059669" opacity=".8">QUICK WINS</text>
+<text x="682" y="88" text-anchor="end" font-size="11" font-weight="800" fill="#2563eb" opacity=".8">BIG BETS</text>
+<text x="78" y="462" text-anchor="start" font-size="11" font-weight="800" fill="#64748b" opacity=".8">FILL-INS</text>
+<text x="682" y="462" text-anchor="end" font-size="11" font-weight="800" fill="#dc2626" opacity=".8">MONEY PITS</text>
+<text x="380.0" y="530" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Effort →</text>
+<text x="22" y="270.0" text-anchor="middle" font-size="12" font-weight="700" fill="#334155" transform="rotate(-90 22 270.0)">Value (reach × impact) →</text>
+<circle cx="177.8" cy="318.5" r="30.0" fill="#059669" fill-opacity=".25" stroke="#059669" stroke-width="2"/>
+<text x="177.8" y="322.5" text-anchor="middle" font-size="11" font-weight="800" fill="#059669">I4</text>
+<circle cx="393.5" cy="227.6" r="27.9" fill="#059669" fill-opacity=".25" stroke="#059669" stroke-width="2"/>
+<text x="393.5" y="231.6" text-anchor="middle" font-size="11" font-weight="800" fill="#059669">I1</text>
+<circle cx="501.3" cy="106.4" r="27.9" fill="#d97706" fill-opacity=".25" stroke="#d97706" stroke-width="2"/>
+<text x="501.3" y="110.4" text-anchor="middle" font-size="11" font-weight="800" fill="#d97706">I2</text>
+<circle cx="114.1" cy="348.8" r="27.9" fill="#059669" fill-opacity=".25" stroke="#059669" stroke-width="2"/>
+<text x="114.1" y="352.8" text-anchor="middle" font-size="11" font-weight="800" fill="#059669">I3</text>
+<circle cx="423.3" cy="268.0" r="26.3" fill="#dc2626" fill-opacity=".25" stroke="#dc2626" stroke-width="2"/>
+<text x="423.3" y="272.0" text-anchor="middle" font-size="11" font-weight="800" fill="#dc2626">I5</text>
+<circle cx="609.1" cy="409.4" r="22.6" fill="#d97706" fill-opacity=".25" stroke="#d97706" stroke-width="2"/>
+<text x="609.1" y="413.4" text-anchor="middle" font-size="11" font-weight="800" fill="#d97706">I6</text>
+<circle cx="76" cy="548" r="6" fill="#059669" fill-opacity=".3" stroke="#059669"/><text x="86" y="552" font-size="10.5" fill="#334155">confidence ≥ 0.8</text>
+<circle cx="196" cy="548" r="6" fill="#d97706" fill-opacity=".3" stroke="#d97706"/><text x="206" y="552" font-size="10.5" fill="#334155">0.5–0.8</text>
+<circle cx="316" cy="548" r="6" fill="#dc2626" fill-opacity=".3" stroke="#dc2626"/><text x="326" y="552" font-size="10.5" fill="#334155">< 0.5</text>
+<text x="690" y="552" text-anchor="end" font-size="10.5" fill="#64748b">bubble size = reach</text>
+<text x="70.0" y="582" font-size="11" fill="#334155"><tspan font-weight="800">I1</tspan>  Payer API integration (top 5 payers)</text>
+<text x="380.0" y="582" font-size="11" fill="#334155"><tspan font-weight="800">I2</tspan>  Field extraction and pre-fill</text>
+<text x="70.0" y="600" font-size="11" fill="#334155"><tspan font-weight="800">I3</tspan>  Human review queue</text>
+<text x="380.0" y="600" font-size="11" fill="#334155"><tspan font-weight="800">I4</tspan>  Status tracker in the schedule view</text>
+<text x="70.0" y="618" font-size="11" fill="#334155"><tspan font-weight="800">I5</tspan>  Missing-document checker</text>
+<text x="380.0" y="618" font-size="11" fill="#334155"><tspan font-weight="800">I6</tspan>  Payer coverage beyond top 5</text>
+</svg></div></div><div><h2>KPI tree</h2><div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 422" font-family="Inter, Arial, sans-serif"><rect width="510" height="422" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="700" fill="#0f172a">KPI tree</text>
+<rect x="20" y="44" width="330" height="52" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.5"/>
+<text x="32" y="63" font-size="11.5" font-weight="700" fill="#fff">K1 · Median days to payer decision</text>
+<text x="32" y="82" font-size="10.5" fill="#cbd5e1">north star · baseline 6.5 days → 3 days</text>
+<path d="M36,96 V132.0 H80" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="80" y="106" width="330" height="52" rx="8" fill="#fff" stroke="#0ea5e9" stroke-width="1.5"/>
+<text x="92" y="125" font-size="11.5" font-weight="700" fill="#0f172a">K2 · Staff minutes per request</text>
+<text x="92" y="144" font-size="10.5" fill="#475569">input · baseline [UNKNOWN] - measure i… → -50%</text>
+<path d="M96,158 V194.0 H140" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="140" y="168" width="330" height="52" rx="8" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+<text x="152" y="187" font-size="11.5" font-weight="700" fill="#0f172a">K5 · Submissions corrected after review</text>
+<text x="152" y="206" font-size="10.5" fill="#475569">guardrail · baseline n/a → &lt; 5%</text>
+<path d="M36,96 V256.0 H80" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="80" y="230" width="330" height="52" rx="8" fill="#fff" stroke="#0ea5e9" stroke-width="1.5"/>
+<text x="92" y="249" font-size="11.5" font-weight="700" fill="#0f172a">K3 · Prior-auth status tickets per 100 reque…</text>
+<text x="92" y="268" font-size="10.5" fill="#475569">input · baseline 14 → 6</text>
+<path d="M36,96 V318.0 H80" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="80" y="292" width="330" height="52" rx="8" fill="#fff" stroke="#0ea5e9" stroke-width="1.5"/>
+<text x="92" y="311" font-size="11.5" font-weight="700" fill="#0f172a">K4 · Denial rate</text>
+<text x="92" y="330" font-size="10.5" fill="#475569">input · baseline [UNKNOWN] → -25%</text>
+<path d="M36,96 V380.0 H80" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="80" y="354" width="330" height="52" rx="8" fill="#fff" stroke="#0ea5e9" stroke-width="1.5"/>
+<text x="92" y="373" font-size="11.5" font-weight="700" fill="#0f172a">K6 · Paying clinics on the add-on</text>
+<text x="92" y="392" font-size="10.5" fill="#475569">input · baseline 0 → 40 in 12 months</text>
+</svg></div></div></div>
+<h2>Outcome roadmap</h2><div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 414" font-family="Inter, Arial, sans-serif"><rect width="990" height="414" fill="#fff"/>
+<text x="20" y="30" font-size="15" font-weight="700" fill="#0f172a">Outcome roadmap · Cut the time clinics spend getting prior-authorization decisions, and turn it into a seco…</text>
+<rect x="20" y="48" width="300" height="354" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+<rect x="20" y="48" width="300" height="34" rx="12" fill="#0ea5e9"/><rect x="20" y="66" width="300" height="16" fill="#0ea5e9"/>
+<text x="34" y="70" font-size="13" font-weight="800" fill="#fff">NOW</text>
+<text x="306" y="70" text-anchor="end" font-size="10.5" fill="#fff">committed</text>
+<rect x="30" y="94" width="280" height="64" rx="8" fill="#fff" stroke="#e2e8f0"/><rect x="30" y="94" width="5" height="64" rx="2" fill="#0ea5e9"/>
+<text x="44" y="113" font-size="11.5" font-weight="700" fill="#0f172a">I3 · Human review queue</text>
+<text x="44" y="130" font-size="10.5" fill="#0ea5e9" font-weight="700">B1 Auto-filled requests</text>
+<text x="44" y="147" font-size="10" fill="#64748b">moves: Staff minutes per request</text>
+<rect x="30" y="170" width="280" height="64" rx="8" fill="#fff" stroke="#e2e8f0"/><rect x="30" y="170" width="5" height="64" rx="2" fill="#0ea5e9"/>
+<text x="44" y="189" font-size="11.5" font-weight="700" fill="#0f172a">I1 · Payer API integration (top 5 paye…</text>
+<text x="44" y="206" font-size="10.5" fill="#0ea5e9" font-weight="700">B1 Auto-filled requests</text>
+<text x="44" y="223" font-size="10" fill="#64748b">moves: Staff minutes per request</text>
+<rect x="30" y="246" width="280" height="64" rx="8" fill="#fff" stroke="#e2e8f0"/><rect x="30" y="246" width="5" height="64" rx="2" fill="#0ea5e9"/>
+<text x="44" y="265" font-size="11.5" font-weight="700" fill="#0f172a">I2 · Field extraction and pre-fill</text>
+<text x="44" y="282" font-size="10.5" fill="#0ea5e9" font-weight="700">B1 Auto-filled requests</text>
+<text x="44" y="299" font-size="10" fill="#64748b">moves: Staff minutes per request</text>
+<rect x="30" y="322" width="280" height="64" rx="8" fill="#fff" stroke="#e2e8f0"/><rect x="30" y="322" width="5" height="64" rx="2" fill="#8b5cf6"/>
+<text x="44" y="341" font-size="11.5" font-weight="700" fill="#0f172a">I4 · Status tracker in the schedule vi…</text>
+<text x="44" y="358" font-size="10.5" fill="#8b5cf6" font-weight="700">B2 Live status tracker</text>
+<text x="44" y="375" font-size="10" fill="#64748b">moves: Prior-auth status tickets per 100 requests</text>
+<rect x="340" y="48" width="300" height="354" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+<rect x="340" y="48" width="300" height="34" rx="12" fill="#8b5cf6"/><rect x="340" y="66" width="300" height="16" fill="#8b5cf6"/>
+<text x="354" y="70" font-size="13" font-weight="800" fill="#fff">NEXT</text>
+<text x="626" y="70" text-anchor="end" font-size="10.5" fill="#fff">likely</text>
+<rect x="350" y="94" width="280" height="64" rx="8" fill="#fff" stroke="#e2e8f0"/><rect x="350" y="94" width="5" height="64" rx="2" fill="#f97316"/>
+<text x="364" y="113" font-size="11.5" font-weight="700" fill="#0f172a">I5 · Missing-document checker</text>
+<text x="364" y="130" font-size="10.5" fill="#f97316" font-weight="700">B3 Denial-risk check</text>
+<text x="364" y="147" font-size="10" fill="#64748b">moves: Denial rate</text>
+<rect x="660" y="48" width="300" height="354" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+<rect x="660" y="48" width="300" height="34" rx="12" fill="#94a3b8"/><rect x="660" y="66" width="300" height="16" fill="#94a3b8"/>
+<text x="674" y="70" font-size="13" font-weight="800" fill="#fff">LATER</text>
+<text x="946" y="70" text-anchor="end" font-size="10.5" fill="#fff">exploring</text>
+<rect x="670" y="94" width="280" height="64" rx="8" fill="#fff" stroke="#e2e8f0"/><rect x="670" y="94" width="5" height="64" rx="2" fill="#0ea5e9"/>
+<text x="684" y="113" font-size="11.5" font-weight="700" fill="#0f172a">I6 · Payer coverage beyond top 5</text>
+<text x="684" y="130" font-size="10.5" fill="#0ea5e9" font-weight="700">B1 Auto-filled requests</text>
+<text x="684" y="147" font-size="10" fill="#64748b">moves: Staff minutes per request</text>
+</svg></div>
+<h2>Dependencies</h2><div class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 310" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker><marker id="arc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker></defs>
+<rect width="900" height="310" fill="#fff"/>
+<text x="30" y="28" font-size="15" font-weight="700" fill="#0f172a">Dependencies · critical path 20 weeks</text>
+<path d="M220,77.0 C250.0,77.0 250.0,77.0 278,77.0" fill="none" stroke="#dc2626" stroke-width="2.4" marker-end="url(#arc)"/>
+<path d="M470,77.0 C500.0,77.0 500.0,77.0 528,77.0" fill="none" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M220,77.0 C250.0,77.0 250.0,157.0 278,157.0" fill="none" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M470,77.0 C500.0,77.0 500.0,157.0 528,157.0" fill="none" stroke="#dc2626" stroke-width="2.4" marker-end="url(#arc)"/>
+<path d="M220,77.0 C250.0,77.0 250.0,237.0 278,237.0" fill="none" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="30" y="50" width="190" height="54" rx="9" fill="#fff" stroke="#dc2626" stroke-width="2.2"/>
+<rect x="30" y="50" width="6" height="54" rx="3" fill="#0ea5e9"/>
+<text x="44" y="71" font-size="11.5" font-weight="700" fill="#0f172a">I1 · Payer API integration (top…</text>
+<text x="44" y="90" font-size="10.5" fill="#475569">6 wks · starts wk 0 · slack 0</text>
+<rect x="280" y="50" width="190" height="54" rx="9" fill="#fff" stroke="#dc2626" stroke-width="2.2"/>
+<rect x="280" y="50" width="6" height="54" rx="3" fill="#0ea5e9"/>
+<text x="294" y="71" font-size="11.5" font-weight="700" fill="#0f172a">I2 · Field extraction and pre-f…</text>
+<text x="294" y="90" font-size="10.5" fill="#475569">8 wks · starts wk 6 · slack 0</text>
+<rect x="280" y="130" width="190" height="54" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="280" y="130" width="6" height="54" rx="3" fill="#0ea5e9"/>
+<text x="294" y="151" font-size="11.5" font-weight="700" fill="#0f172a">I4 · Status tracker in the sche…</text>
+<text x="294" y="170" font-size="10.5" fill="#475569">4 wks · starts wk 6 · slack 10</text>
+<rect x="280" y="210" width="190" height="54" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="280" y="210" width="6" height="54" rx="3" fill="#94a3b8"/>
+<text x="294" y="231" font-size="11.5" font-weight="700" fill="#0f172a">I6 · Payer coverage beyond top 5</text>
+<text x="294" y="250" font-size="10.5" fill="#475569">10 wks · starts wk 6 · slack 4</text>
+<rect x="530" y="50" width="190" height="54" rx="9" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<rect x="530" y="50" width="6" height="54" rx="3" fill="#0ea5e9"/>
+<text x="544" y="71" font-size="11.5" font-weight="700" fill="#0f172a">I3 · Human review queue</text>
+<text x="544" y="90" font-size="10.5" fill="#475569">3 wks · starts wk 14 · slack 3</text>
+<rect x="530" y="130" width="190" height="54" rx="9" fill="#fff" stroke="#dc2626" stroke-width="2.2"/>
+<rect x="530" y="130" width="6" height="54" rx="3" fill="#8b5cf6"/>
+<text x="544" y="151" font-size="11.5" font-weight="700" fill="#0f172a">I5 · Missing-document checker</text>
+<text x="544" y="170" font-size="10.5" fill="#475569">6 wks · starts wk 14 · slack 0</text>
+</svg></div>
+<h2>Bet scorecard</h2><table><tr><th>Bet</th><th>Result</th><th>Decision</th><th>What we learned</th></tr><tr><td><b>B2</b></td><td>Status tickets 14 -&gt; 7 per 100 requests in pilot</td><td><span class="dc scale">scale</span></td><td>Clinics open the tracker daily; the remaining tickets are about denials, not status</td></tr></table>
+</div><script>
+(function(){var UP={"E1": ["S1"], "E2": ["S2"], "E3": ["S2"], "E4": ["S3"], "E5": ["S4"], "E6": ["S5"], "E7": ["S1"], "N1": ["E2", "E4"], "N2": ["E1"], "N3": ["E3"], "N4": ["E7"], "O1": ["N1", "N2"], "O2": ["N1"], "O3": ["N3"], "B1": ["O1"], "B2": ["O2"], "B3": ["O3"], "I1": ["B1"], "I2": ["B1"], "I3": ["B1"], "I4": ["B2"], "I5": ["B3"], "I6": ["B1"], "K1": [], "K2": ["B1", "K1"], "K3": ["B2", "K1"], "K4": ["B3", "K1"], "K5": ["K2"], "K6": ["K1"]};var BETK={"B1": "K2", "B2": "K3", "B3": "K4"};var DOWN={};Object.keys(UP).forEach(function(k){UP[k].forEach(function(p){(DOWN[p]=DOWN[p]||[]).push(k);});});
+var ch=document.getElementById('chain'),cur=null;
+function walk(id,map,acc){(map[id]||[]).forEach(function(n){if(!acc[n]){acc[n]=1;walk(n,map,acc);}});return acc;}
+ch.addEventListener('click',function(ev){var c=ev.target.closest('.cd');if(!c)return;var id=c.dataset.id;
+ if(cur===id){cur=null;ch.classList.remove('sel');[].forEach.call(ch.querySelectorAll('.cd'),function(x){x.classList.remove('on');});return;}
+ cur=id;var on={};on[id]=1;walk(id,UP,on);walk(id,DOWN,on);Object.keys(on).forEach(function(k){if(BETK[k])on[BETK[k]]=1;});ch.classList.add('sel');
+ [].forEach.call(ch.querySelectorAll('.cd'),function(x){x.classList.toggle('on',!!on[x.dataset.id]);});});})();
+</script></body></html>

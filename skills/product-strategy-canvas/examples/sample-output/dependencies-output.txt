@@ -1,0 +1,11 @@
+Critical path (20 weeks): I1 -> I2 -> I5
+
+  ID   Initiative                                Wks  Start  Finish  Slack  Blocks
+  I1   Payer API integration (top 5 payers)        6      0       6      0  3  ← critical
+  I2   Field extraction and pre-fill               8      6      14      0  2  ← critical
+  I3   Human review queue                          3     14      17      3  0
+  I4   Status tracker in the schedule view         4      6      10     10  0
+  I5   Missing-document checker                    6     14      20      0  0  ← critical
+  I6   Payer coverage beyond top 5                10      6      16      4  0
+
+Coordination hotspots (block 2+ items): I1, I2

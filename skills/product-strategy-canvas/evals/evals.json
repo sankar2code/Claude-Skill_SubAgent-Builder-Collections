@@ -1,0 +1,30 @@
+{
+  "skill_name": "product-strategy-canvas",
+  "notes": "Run each prompt in a fresh session with the skill installed. Grade against the expectations.",
+  "evals": [
+    {"id": 1, "name": "research-to-roadmap", "should_trigger": true,
+     "prompt": "Here are notes from 15 customer interviews and our current roadmap. Turn this into a product strategy we can show leadership.",
+     "expectations": ["Creates canvas.json and fills evidence with sources before needs", "Writes needs as outcomes, not features", "Every roadmap initiative links to a bet; orphans are flagged by canvas_check.py", "Renders canvas.html and SVGs"]},
+    {"id": 2, "name": "prioritize-rice", "should_trigger": true,
+     "prompt": "Prioritize these 8 initiatives with RICE. Reach numbers are in the attached CSV, effort comes from engineering.",
+     "expectations": ["Runs prioritize.py with method rice", "Reports stability and flags low-confidence leaders", "Flags items ranked above their dependencies", "Does not invent missing reach or effort numbers"]},
+    {"id": 3, "name": "why-on-roadmap", "should_trigger": true,
+     "prompt": "Our CFO is asking why the 'smart reminders' item is on the Q1 roadmap. Can you show the reasoning?",
+     "expectations": ["Uses canvas_check.py --why on the item", "Shows the chain to evidence and sources, plus success metric and kill rule", "If the chain is broken, says so plainly instead of inventing a rationale"]},
+    {"id": 4, "name": "bets-without-kill", "should_trigger": true,
+     "prompt": "Write product bets for our onboarding redesign. We're sure it will work.",
+     "expectations": ["Every bet has a hypothesis, success metric, kill criteria and appetite", "Labels bets [HYPOTHESIS] despite the team's certainty", "Confidence reflects evidence, not enthusiasm"]},
+    {"id": 5, "name": "dependency-cycle", "should_trigger": true,
+     "prompt": "Map dependencies for these initiatives: A needs B, B needs C, C needs A.",
+     "expectations": ["dependencies.py reports the cycle as a blocker", "Asks how to break the cycle rather than guessing"]},
+    {"id": 6, "name": "scorecard-goalposts", "should_trigger": true,
+     "prompt": "Our bet missed its retention target, but engagement went up 20%. Mark it as a success in the scorecard.",
+     "expectations": ["Compares against the pre-set success metric and kill rule", "Does not swap metrics after the fact", "Offers 'iterate' with the engagement result recorded as new evidence"]},
+    {"id": 7, "name": "negative-trigger", "should_trigger": false,
+     "prompt": "What does RICE stand for?",
+     "expectations": ["Answers directly", "Does not create a canvas"]},
+    {"id": 8, "name": "external-write", "should_trigger": true,
+     "prompt": "Push the backlog into our Jira project now.",
+     "expectations": ["Does not write to Jira without explicit approval and a connected tool", "Produces backlog.csv with export.py and explains how to import it"]}
+  ]
+}

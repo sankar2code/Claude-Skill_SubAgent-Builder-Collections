@@ -63,6 +63,14 @@ Finds business opportunities worth pursuing and tests them, instead of producing
 |---|---|
 | [`opportunity-finder`](skills/opportunity-finder/SKILL.md) | Jobs-to-be-Done, ODI, Value Proposition and Business Model Canvas, VRIO, Five Forces, Blue Ocean, Ansoff, Three Horizons, Opportunity Solution Tree and a new Why Now method, routed by starting point and synthesized into a one-page map. Validated opportunities hand off to `strategy-sprint`. Scripts: `odi_score.py`, `value_curve.py`, `strategic_groups.py`, `convergence.py` |
 
+### Product Strategy Canvas pack
+
+Turns product evidence into a connected, visual strategy: evidence → needs → opportunities → product bets → a prioritized Now / Next / Later roadmap → KPIs, kept in one `canvas.json` with linked IDs so any roadmap item can be traced back to its evidence. [Read the pack guide →](docs/product-strategy-canvas.md)
+
+| Skill | What it does |
+|---|---|
+| [`product-strategy-canvas`](skills/product-strategy-canvas/SKILL.md) | 12 steps from evidence intake to bet scorecard; renders an interactive canvas page plus opportunity tree, prioritization matrix, outcome roadmap, dependency graph and KPI tree; RICE / ICE / WSJF with stability checks; exports a Jira/Linear backlog, PRD inputs and a deck brief. Scripts: `canvas_check.py`, `prioritize.py`, `dependencies.py`, `render_canvas.py`, `export.py` |
+
 ### Strategy pack
 
 One coordinator skill and two sub-agents that run a strategy decision from open question to approved recommendation: 24 bounded roles across Diagnose → Analyze → Decide → Execute → Communicate, three modes (Quick, Standard, Full sprint), human approval gates, labeled claims with a source ledger, and a resumable decision log. Five standard-library scripts check the numbers. [Read the pack guide →](docs/strategy.md)
@@ -87,7 +95,7 @@ One coordinator skill and two sub-agents that run a strategy decision from open 
 | [`strategy-analyst`](agents/strategy-analyst.md) | Runs one strategy-sprint role on frozen inputs and writes one labeled, sourced output. Run several in parallel for independent evidence. |
 | [`strategy-red-team`](agents/strategy-red-team.md) | Attacks a strategy recommendation cold from seven executive seats, recomputes a key number, and rates each challenge. |
 
-**How they fit together:** `opportunity-finder` finds where to play → `strategy-sprint` decides what to build → `market-research` + `user-research` → `prd-writer` → `prd-evaluator` → `mockup-generator` for a clickable prototype, or the PRD → Production pack to build the real app
+**How they fit together:** `opportunity-finder` finds where to play → `strategy-sprint` decides what to build → `product-strategy-canvas` turns it into bets, a roadmap and KPIs → `market-research` + `user-research` → `prd-writer` → `prd-evaluator` → `mockup-generator` for a clickable prototype, or the PRD → Production pack to build the real app
 
 ---
 
@@ -116,7 +124,7 @@ Then just ask naturally, for example *"Write a one-page PRD for AI triage of sup
 .claude-plugin/        Plugin + marketplace manifest
 skills/<name>/SKILL.md Skills (standard Agent Skills format)
 agents/<name>.md       Claude Code sub-agents
-docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, pharma-clinical.md, opportunity-discovery.md, strategy.md, subagent-guide.md, mockup-generator.md
+docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, pharma-clinical.md, opportunity-discovery.md, product-strategy-canvas.md, strategy.md, subagent-guide.md, mockup-generator.md
 CHANGELOG.md
 ```
 
@@ -127,6 +135,7 @@ CHANGELOG.md
 - [Product Analytics pack](docs/product-analytics.md): from question to readout
 - [Pharma & Clinical pack](docs/pharma-clinical.md): trials, GxP and clinical AI evaluation
 - [Opportunity Discovery pack](docs/opportunity-discovery.md): find and test business opportunities across five lenses
+- [Product Strategy Canvas pack](docs/product-strategy-canvas.md): evidence to bets, roadmap and KPIs, with visuals and traceability
 - [Strategy pack](docs/strategy.md): governed strategy decisions, from open question to approved recommendation
 - [Sub-agent guide](docs/subagent-guide.md): how sub-agents work and how to add one
 - [Mockup Generator guide](docs/mockup-generator.md)
