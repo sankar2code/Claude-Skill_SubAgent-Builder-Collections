@@ -1,0 +1,28 @@
+{
+  "_note": "Illustrative. Weights must be agreed by the decision owner at Gate 1, before scoring.",
+  "weights_agreed_by": "Decision owner (CEO), Gate 1, 2026-10-01",
+  "weights": {"value": 35, "speed_to_market": 20, "risk": 20, "strategic_control": 15, "capability_fit": 10},
+  "options": {
+    "Status quo": {
+      "value": {"score": 1, "evidence": "no new revenue [INFERENCE]"},
+      "speed_to_market": {"score": 5, "evidence": "nothing to build"},
+      "risk": {"score": 4, "evidence": "no delivery risk; competitive risk rising [INFERENCE]"},
+      "strategic_control": {"score": 3, "evidence": "no change"},
+      "capability_fit": {"score": 5, "evidence": "no change"}
+    },
+    "Build in-house": {
+      "value": {"score": 4, "evidence": "highest margin in business case [ESTIMATE S6]"},
+      "speed_to_market": {"score": 2, "evidence": "12-15 months to GA [ESTIMATE S9]"},
+      "risk": {"score": 2, "evidence": "eval threshold not yet met [HYPOTHESIS]"},
+      "strategic_control": {"score": 5, "evidence": "own data and roadmap"},
+      "capability_fit": {"score": 3, "evidence": "ML team of 3; needs 4 hires [FACT S10]"}
+    },
+    "Partner with vendor": {
+      "value": {"score": 3, "evidence": "lower margin after revenue share [ESTIMATE S8]"},
+      "speed_to_market": {"score": 4, "evidence": "4-6 months to GA [ESTIMATE S8]"},
+      "risk": {"score": 3, "evidence": "vendor concentration risk [INFERENCE]"},
+      "strategic_control": {"score": 2, "evidence": "vendor owns model roadmap"},
+      "capability_fit": {"score": 4, "evidence": "integration skills in house [FACT S10]"}
+    }
+  }
+}

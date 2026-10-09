@@ -1,0 +1,12 @@
+## Handoff
+- Role:
+- Status: draft | challenged | approved
+- As-of:
+- Inputs: (files + versions used)
+- Output: (this file + version)
+- Labels: FACT n · ESTIMATE n · INFERENCE n · HYPOTHESIS n · UNKNOWN n
+- Contradictions: (material conflicts between sources, or "none")
+- Open issues: ([OPEN] / [UNSOURCED] / [OWNER NEEDED] items, or "none")
+- Checks: (scripts run and result; quality-gate items passed or failed)
+- Next: (recommended next role)
+- Human approval: (gate or decision needed, or "none")

@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.7.0 (October 2026)
+- Added the **Strategy pack**: `strategy-sprint` skill with 24 role playbooks across Diagnose → Analyze → Decide → Execute → Communicate, including four roles for AI and regulated products (`ai-feasibility-risk`, `regulatory-screen`, `build-buy-partner`, `pilot-experiment-designer`).
+- Quick, Standard and Full sprint modes; three human approval gates; one claim-label scheme (FACT / ESTIMATE / INFERENCE / HYPOTHESIS / UNKNOWN) with a source ledger; resumable `decision-log.md`.
+- Standard-library scripts: `market_size.py` (top-down vs bottom-up reconciliation), `business_case.py` (NPV, IRR, payback, sensitivity, break-even), `weighted_score.py` (weighted options with fragility test), `ledger_check.py` (lineage, staleness, unlabeled numbers), `handoff_lint.py`.
+- Bias controls: pre-mortem, reference-class check, kill criteria, independent red team.
+- 13 templates, a fictional worked example with sample outputs that pass the checks, and 8 eval prompts.
+- Added 2 sub-agents: `strategy-analyst` (runs one role, parallel-safe) and `strategy-red-team` (cold challenge).
+- Added `docs/strategy.md`.
+
 ## v1.6.0 (October 2026)
 - Added 8 sub-agents: `prd-red-team-reviewer`, `backlog-builder`, `feature-builder` (Stage 5 of PRD → Production), `data-analyst`, `clinical-trial-landscape-scout`, `security-compliance-auditor`, `release-notes-writer`, `ai-eval-builder`.
 - Sub-agent guide now maps each agent to the skills it works with.

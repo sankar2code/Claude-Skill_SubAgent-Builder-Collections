@@ -1,0 +1,3 @@
+id,title,publisher_or_owner,date,as_of,location,type,trust,access,notes
+S1,Example: industry report on prior-authorization software spend,Example Research Co,2026-03-15,2026-03-15,p.12 table 3,secondary,medium,licensed copy approved for this project,Method: vendor revenue survey; illustrative row - replace
+S2,Example: provider group size distribution,Example public dataset,2025-11-01,2025-11-01,table 2 rows 4-6,primary-external,high,public,Illustrative row - replace

@@ -1,0 +1,18 @@
+{
+  "_note": "Illustrative numbers for a fictional company. Replace every driver with your own, labeled and sourced.",
+  "boundary": "US mid-size provider groups (20-200 clinicians) needing prior authorization for outpatient procedures; software spend only; excludes hospitals and payer-side tools",
+  "unit": "USD/yr",
+  "period": "2027",
+  "methods": {
+    "top_down": [
+      {"name": "US prior-auth admin software spend", "low": 1.6e9, "base": 2.0e9, "high": 2.4e9, "label": "ESTIMATE", "source": "S1"},
+      {"name": "share from mid-size provider groups", "low": 0.25, "base": 0.30, "high": 0.35, "label": "ESTIMATE", "source": "S2"},
+      {"name": "share addressable by an AI assistant", "low": 0.40, "base": 0.50, "high": 0.60, "label": "INFERENCE"}
+    ],
+    "bottom_up": [
+      {"name": "mid-size provider groups in scope", "low": 9000, "base": 10000, "high": 11000, "label": "FACT", "source": "S3"},
+      {"name": "adoption within horizon", "low": 0.6, "base": 0.7, "high": 0.8, "label": "HYPOTHESIS"},
+      {"name": "annual contract value (USD)", "low": 36000, "base": 42000, "high": 48000, "label": "ESTIMATE", "source": "S4"}
+    ]
+  }
+}

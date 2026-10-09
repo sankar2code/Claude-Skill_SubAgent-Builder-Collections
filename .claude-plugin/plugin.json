@@ -1,7 +1,7 @@
 {
   "name": "pm-builder-kit",
-  "version": "1.6.0",
-  "description": "Claude skills and sub-agents for product managers: 19 skills in four packs (PM Core, PRD → Production, Product Analytics, Pharma & Clinical) and 9 sub-agents for PRD review, backlogs, feature building, data analysis, trial landscapes, security audits, release notes, AI evals and mockups.",
+  "version": "1.7.0",
+  "description": "Claude skills and sub-agents for product managers: 20 skills in five packs (PM Core, PRD → Production, Product Analytics, Pharma & Clinical, Strategy) and 11 sub-agents for PRD review, backlogs, feature building, data analysis, trial landscapes, security audits, release notes, AI evals, mockups, strategy analysis and strategy red-teaming.",
   "author": {
     "name": "Sankar Kumar Palaniappan",
     "url": "https://sankar.work"
@@ -30,7 +30,11 @@
     "trial-matching",
     "subagents-pack",
     "evals",
-    "backlog"
+    "backlog",
+    "strategy",
+    "business-case",
+    "decision-making",
+    "build-vs-buy"
   ],
   "license": "MIT"
 }

@@ -1,0 +1,35 @@
+{
+  "_note": "Illustrative numbers for a fictional company. Cash flows are incremental to the baseline.",
+  "baseline": "Status quo: manual prior-auth work by staff, no new product",
+  "currency_symbol": "$",
+  "discount_rate": 0.12,
+  "years": 5,
+  "options": {
+    "Build in-house": {
+      "investment": 2400000,
+      "volume": [40, 120, 260, 400, 520],
+      "price": 42000,
+      "margin": 0.70,
+      "fixed_cost": [900000, 1100000, 1300000, 1400000, 1500000],
+      "assumptions": {
+        "volume": "customers live by year end [HYPOTHESIS] sales plan, not yet tested",
+        "price": "annual contract value [ESTIMATE S4]",
+        "margin": "gross margin after model and hosting cost [ESTIMATE S6]",
+        "fixed_cost": "team, compliance and support [ESTIMATE S7]"
+      }
+    },
+    "Partner with vendor": {
+      "investment": 600000,
+      "volume": [60, 150, 280, 380, 450],
+      "price": 42000,
+      "margin": 0.45,
+      "fixed_cost": [400000, 500000, 600000, 650000, 700000],
+      "assumptions": {
+        "volume": "faster start through vendor references [HYPOTHESIS]",
+        "price": "same contract value [ESTIMATE S4]",
+        "margin": "after vendor revenue share [ESTIMATE S8]",
+        "fixed_cost": "integration and account team [ESTIMATE S7]"
+      }
+    }
+  }
+}

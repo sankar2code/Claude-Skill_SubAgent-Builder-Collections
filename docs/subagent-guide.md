@@ -100,6 +100,8 @@ Two ways:
 | [`security-compliance-auditor`](../agents/security-compliance-auditor.md) | Read-only audit of a codebase: auth, RLS, validation, secrets, LLM risks, and Part 11 / ALCOA+ where relevant. | `Read, Glob, Grep, Bash` | `inherit` |
 | [`release-notes-writer`](../agents/release-notes-writer.md) | Reads git history and writes customer release notes, a changelog entry and an announcement. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
 | [`ai-eval-builder`](../agents/ai-eval-builder.md) | Builds an eval suite for an AI feature: labeled test set, rubric, LLM judge, release gates and a runnable script. | `Read, Write, Edit, Glob, Grep, Bash` | `inherit` |
+| [`strategy-analyst`](../agents/strategy-analyst.md) | Runs one `strategy-sprint` role on frozen inputs and writes one labeled, sourced output file. Parallel-safe leaf worker. | `Read, Write, Glob, Grep, Bash, WebSearch, WebFetch` | `inherit` |
+| [`strategy-red-team`](../agents/strategy-red-team.md) | Attacks a strategy recommendation cold from seven executive seats, recomputes a key number, rates challenges. Writes only its own review. | `Read, Write, Glob, Grep, Bash, WebSearch, WebFetch` | `inherit` |
 
 ### `mockup-generator`
 

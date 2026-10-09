@@ -8,7 +8,7 @@
     {
       "name": "pm-builder-kit",
       "source": "./",
-      "description": "Claude skills and sub-agents for product managers: 19 skills in four packs (PM Core, PRD → Production, Product Analytics, Pharma & Clinical) and 9 sub-agents for PRD review, backlogs, feature building, data analysis, trial landscapes, security audits, release notes, AI evals and mockups."
+      "description": "Claude skills and sub-agents for product managers: 20 skills in five packs (PM Core, PRD → Production, Product Analytics, Pharma & Clinical, Strategy) and 11 sub-agents for PRD review, backlogs, feature building, data analysis, trial landscapes, security audits, release notes, AI evals, mockups, strategy analysis and strategy red-teaming."
     }
   ]
 }

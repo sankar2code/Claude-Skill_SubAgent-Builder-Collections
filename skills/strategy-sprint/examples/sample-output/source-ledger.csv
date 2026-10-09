@@ -1,0 +1,7 @@
+id,title,publisher_or_owner,date,as_of,location,type,trust,access,notes
+S1,Prior-auth software market report (fictional),Example Research Co,2026-03-15,2026-03-15,p.12 table 3,secondary,medium,licensed,Vendor revenue survey; method partly disclosed
+S2,Provider group size distribution (fictional),Example public dataset,2025-11-01,2025-11-01,table 2 rows 4-6,primary-external,high,public,
+S3,Count of mid-size provider groups (fictional),Example public registry,2026-01-10,2026-01-10,query export 2026-01-10,primary-external,high,public,
+S4,Helio Health win/loss and pricing file (fictional),Helio Health sales ops,2026-09-30,2026-09-30,pricing tab rows 2-41,primary-internal,high,approved internal,Average annual contract value of closed deals
+S5,Prior-auth staff time study (fictional),Helio Health customer success,2026-08-20,2026-08-20,summary sheet,primary-internal,medium,approved internal,n=14 customers; self-reported hours
+S6,Model hosting cost estimate (fictional),Helio Health engineering,2026-09-12,2026-09-12,cost model v3 tab 2,primary-internal,medium,approved internal,
