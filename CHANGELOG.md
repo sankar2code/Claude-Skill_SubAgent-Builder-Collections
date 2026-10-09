@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.8.0 (October 2026)
+- Added the **Opportunity Discovery pack**: `opportunity-finder` skill with 21 method playbooks across five lenses (Customer, Offer, Capabilities & Assets, Market, Strategic Choice), including a new `why-now-shift` method for technology, AI, regulation and behavior changes.
+- Routes by starting point (customer problem, capability, market shift, idea, service business, portfolio, full scan) instead of running every framework.
+- Synthesis into an evidence-weighted Business Opportunity Map (convergence matrix, five opportunity conditions, Explore / Validate / Pause / Reject); Validate hands off to `strategy-sprint`.
+- Corrected ODI scoring: importance + max(importance − satisfaction, 0), from survey data with sample-size flags.
+- Standard-library scripts: `odi_score.py`, `value_curve.py` (Blue Ocean strategy canvas SVG), `strategic_groups.py` (SVG), `convergence.py` (markdown + HTML heatmap).
+- 8 templates (including an interview guide), a fictional worked example with generated sample outputs, 8 eval prompts, and credits to the original framework authors.
+
 ## v1.7.0 (October 2026)
 - Added the **Strategy pack**: `strategy-sprint` skill with 24 role playbooks across Diagnose → Analyze → Decide → Execute → Communicate, including four roles for AI and regulated products (`ai-feasibility-risk`, `regulatory-screen`, `build-buy-partner`, `pilot-experiment-designer`).
 - Quick, Standard and Full sprint modes; three human approval gates; one claim-label scheme (FACT / ESTIMATE / INFERENCE / HYPOTHESIS / UNKNOWN) with a source ledger; resumable `decision-log.md`.

@@ -55,6 +55,14 @@ Four skills for life-sciences product, data and clinical-operations teams, using
 | [`trial-eligibility-matcher`](skills/trial-eligibility-matcher/SKILL.md) | Screens a de-identified patient against trial criteria, or finds recruiting trials (`search_trials.py`, `fetch_criteria.py`); deterministic checker with citation and span checks (`check_criteria.py`) |
 | [`clinical-ai-evaluation-design`](skills/clinical-ai-evaluation-design/SKILL.md) | Monitoring signal → governance action, escalation pathway, trial design and estimand for clinical AI (Fosset et al., PLOS Digital Health 2026) |
 
+### Opportunity Discovery pack
+
+Finds business opportunities worth pursuing and tests them, instead of producing idea lists. One business, five lenses (Customer, Offer, Capabilities & Assets, Market, Strategic Choice), 21 methods, and an evidence-weighted Business Opportunity Map that ends in Explore / Validate / Pause / Reject. [Read the pack guide →](docs/opportunity-discovery.md)
+
+| Skill | What it does |
+|---|---|
+| [`opportunity-finder`](skills/opportunity-finder/SKILL.md) | Jobs-to-be-Done, ODI, Value Proposition and Business Model Canvas, VRIO, Five Forces, Blue Ocean, Ansoff, Three Horizons, Opportunity Solution Tree and a new Why Now method, routed by starting point and synthesized into a one-page map. Validated opportunities hand off to `strategy-sprint`. Scripts: `odi_score.py`, `value_curve.py`, `strategic_groups.py`, `convergence.py` |
+
 ### Strategy pack
 
 One coordinator skill and two sub-agents that run a strategy decision from open question to approved recommendation: 24 bounded roles across Diagnose → Analyze → Decide → Execute → Communicate, three modes (Quick, Standard, Full sprint), human approval gates, labeled claims with a source ledger, and a resumable decision log. Five standard-library scripts check the numbers. [Read the pack guide →](docs/strategy.md)
@@ -79,7 +87,7 @@ One coordinator skill and two sub-agents that run a strategy decision from open 
 | [`strategy-analyst`](agents/strategy-analyst.md) | Runs one strategy-sprint role on frozen inputs and writes one labeled, sourced output. Run several in parallel for independent evidence. |
 | [`strategy-red-team`](agents/strategy-red-team.md) | Attacks a strategy recommendation cold from seven executive seats, recomputes a key number, and rates each challenge. |
 
-**How they fit together:** `strategy-sprint` decides what to build → `market-research` + `user-research` → `prd-writer` → `prd-evaluator` → `mockup-generator` for a clickable prototype, or the PRD → Production pack to build the real app
+**How they fit together:** `opportunity-finder` finds where to play → `strategy-sprint` decides what to build → `market-research` + `user-research` → `prd-writer` → `prd-evaluator` → `mockup-generator` for a clickable prototype, or the PRD → Production pack to build the real app
 
 ---
 
@@ -108,7 +116,7 @@ Then just ask naturally, for example *"Write a one-page PRD for AI triage of sup
 .claude-plugin/        Plugin + marketplace manifest
 skills/<name>/SKILL.md Skills (standard Agent Skills format)
 agents/<name>.md       Claude Code sub-agents
-docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, pharma-clinical.md, strategy.md, subagent-guide.md, mockup-generator.md
+docs/                  Guides: skills-guide.md, prd-to-production.md, product-analytics.md, pharma-clinical.md, opportunity-discovery.md, strategy.md, subagent-guide.md, mockup-generator.md
 CHANGELOG.md
 ```
 
@@ -118,6 +126,7 @@ CHANGELOG.md
 - [PRD → Production pack](docs/prd-to-production.md): the five-stage build workflow
 - [Product Analytics pack](docs/product-analytics.md): from question to readout
 - [Pharma & Clinical pack](docs/pharma-clinical.md): trials, GxP and clinical AI evaluation
+- [Opportunity Discovery pack](docs/opportunity-discovery.md): find and test business opportunities across five lenses
 - [Strategy pack](docs/strategy.md): governed strategy decisions, from open question to approved recommendation
 - [Sub-agent guide](docs/subagent-guide.md): how sub-agents work and how to add one
 - [Mockup Generator guide](docs/mockup-generator.md)
